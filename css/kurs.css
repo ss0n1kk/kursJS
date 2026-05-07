@@ -1,0 +1,108 @@
+@import url('https://fonts.googleapis.com/css2?family=Anonymous+Pro:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+
+
+
+.imgKurs{
+    width: 240px;
+}
+
+.imgJS {
+    width: 900px;
+}
+
+.arrowsL, .arrowsR{
+    width: 150px;
+}
+
+.text{
+    font-size: 20px;
+}
+
+.roundImg{
+    border-radius: 50%;
+}
+
+h4, h3, h5{
+    font-family: "Anonymous Pro", monospace;
+    font-weight: 700;
+    font-style: normal;
+}
+
+p{
+    font-family: "Anonymous Pro", monospace;
+    font-weight: 400;
+    font-style: normal;
+}
+
+.goldText{
+    color: #fdd870
+}
+
+.custom-card {
+    max-width: 1250px;
+    height: 250px;
+    background-color: #839965;
+    color: white;
+    padding: 10px 0 10px 10px;
+    display: flex;
+    margin: 0 auto;
+    flex-direction: column;
+    justify-content: space-between;
+    box-sizing: border-box;
+    margin-top: 10%;
+    margin-bottom: 10%;
+    box-shadow: 
+    0.3em 0.3em 1em rgba(102, 97, 97, 0.6);
+    ;
+}
+
+.card-text h4{
+    margin-top: 30px;
+    margin-left: 30px;
+    font-size: 2rem;
+}
+
+.custom-btn {
+    width: 340px;
+    height: 70px;
+    background-color: black;
+    color: white;
+    border: none;
+    border-radius: 0;
+    font-size: 1.4rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    margin-bottom: 40px;
+    margin-left: 30px;
+    transition: 0.3s;
+}
+.custom-btn:hover {
+    transform: scale(1.02);
+    box-shadow: 0 0 25px #A8CE81;
+    border-color: #c0e0a0;
+}
+
+.img-btn{
+    width: 400px;
+    border-radius: 35px;
+    transition: 0.3s;
+}
+
+.img-btn:hover {
+    transform: scale(1.02);
+    box-shadow: 0 0 25px #A8CE81;
+    border-color: #c0e0a0;
+}
+
+@media (max-width: 768px) {
+    .imgKurs { max-width: 200px; }
+    .imgJS { max-width: 450px; }
+    .arrowsR,
+    .arrowsL { display: none; }
+    .img-btn { width: 50px; }
+    .card-img{ display: none; }
+    .img-btn { width: 450px; }
+    footer { margin-top: 200px; }
+}

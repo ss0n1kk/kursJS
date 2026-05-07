@@ -1,0 +1,172 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: 'Montserrat Alternates', monospace;
+    background-color: #0a0c0f;
+    background-image: 
+    linear-gradient(rgba(0, 0, 0, 0.65), rgba(0, 0, 0, 0.65)),
+    url('/assets/firstQuest/grimuar/background.jpg');
+    background-repeat: repeat;
+    background-attachment: fixed;
+    color: #ffffff;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+main {
+    flex: 1 0 auto;
+}
+
+/* блоки кода */
+.code-widget {
+    background-color: #262626;
+    border-radius: 20px;
+    overflow: hidden;
+    margin-bottom: 1.5rem;
+    box-shadow: 0 12px 25px -8px rgba(0,0,0,0.6);
+    transition: transform 0.2s ease;
+}
+.code-widget:hover {
+    transform: translateY(-3px);
+}
+.code-header {
+    background: #1e1e1e;
+    padding: 0.6rem 1.2rem;
+    font-family: 'Source Code Pro', monospace;
+    font-weight: 600;
+    font-size: 0.9rem;
+    letter-spacing: 0.5px;
+    color: #f5f5f5;
+    border-bottom: 1px solid #2c2c2c;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+.code-header::before {
+    content: "● ● ●";
+    font-size: 12px;
+    letter-spacing: 2px;
+    color: #ff5f56;
+    margin-right: 8px;
+}
+.code-content {
+    padding: 1.2rem;
+    font-family: 'Source Code Pro', monospace;
+    font-size: 1rem;
+    overflow-x: auto;
+}
+
+/* цвета */
+.code-content .keyword {
+    color: #D4AF37;
+    font-weight: 500;
+}
+.code-content .variable {
+    color: #75FF72;
+}
+.code-content .value {
+    color: #ED484B;
+}
+.code-content .comment {
+    color: #5d6fbd;
+    font-style: italic;
+}
+.code-content .string {
+    color: #ED484B;
+}
+.code-content .function {
+    color: #D4AF37;
+}
+
+.mb-150{
+    margin-bottom: 150px;
+}
+
+/* тест */
+.test-card {
+    background-color: #191919a7;
+    border: 2px solid #fdd870;
+    border-radius: 28px;
+    padding: 1.5rem;
+    margin-top: 150px;
+    margin-bottom: 150px;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.5);
+}
+.divider {
+    height: 2px;
+    background: #fdd870;
+    margin: 1rem 0;
+}
+.variant-list {
+    list-style: none;
+    padding-left: 0;
+}
+.variant-list li {
+    margin-bottom: 10px;
+    font-family: 'Source Code Pro', monospace;
+    background: #252525;
+    display: inline-block;
+    width: auto;
+    padding: 6px 14px;
+    border-radius: 40px;
+    margin-right: 12px;
+    margin-bottom: 12px;
+    font-size: 0.9rem;
+    border: 1px solid #3a3a3a;
+}
+.answer-input {
+    background-color: #2a2a2a;
+    border: 1px solid #B2C773;
+    color: white;
+    font-family: monospace;
+}
+.answer-input:focus {
+    background-color: #2f2f2f;
+    border-color: #e4c87b;
+    box-shadow: 0 0 0 0.2rem rgba(180, 200, 100, 0.3);
+}
+
+/* кастомная кнопка */
+.scroll-btn {
+    background-image: url('https://www.transparenttextures.com/patterns/old-paper.png');
+    background-color: #d4c9a3;
+    background-blend-mode: overlay;
+    border: 2px solid #b8860b;
+    border-radius: 40px 12px 40px 12px;
+    padding: 14px 32px;
+    font-weight: bold;
+    font-size: 1.3rem;
+    color: #2c2b26;
+    transition: 0.25s;
+    box-shadow: 8px 8px 0px #5a3e1b;
+    font-family: 'Anonymous Pro', monospace;
+}
+.scroll-btn:hover {
+    transform: translate(2px, 2px);
+    box-shadow: 4px 4px 0px #5a3e1b;
+    background-color: #e2d8b6;
+    color: #1f1b10;
+}
+
+/* адаптивность */
+@media (max-width: 768px) {
+    .code-content {
+        font-size: 0.75rem;
+        padding: 1rem;
+    }
+    .variant-list li {
+        font-size: 0.8rem;
+        padding: 4px 10px;
+    }
+    .test-card {
+        padding: 1rem;
+    }
+    h1 {
+        font-size: 1.5rem;
+    }
+}

@@ -1,0 +1,80 @@
+* {
+  margin: 0;
+}
+
+body {
+  background-image: url('../assets/prologue1background.png');
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  margin: 0;
+  position: relative;
+}
+
+.container {
+  position: relative;
+  z-index: 2;
+}
+
+h1 {
+  font-family: 'Press Start 2P', cursive;
+}
+
+p, .lead, .fs-5 {
+  font-family: 'Montserrat Alternates', sans-serif;
+}
+
+.master-phrase {
+  font-family: 'Caveat', cursive;
+  font-size: 1.6rem;
+  color: #A8CE81;
+}
+
+.green-text {
+  color: #A8CE81;
+  font-weight: 500;
+}
+
+.gold-text{
+    color: #fdd870;
+}
+
+.btn-custom {
+  font-family: 'Press Start 2P', cursive;
+  font-size: 0.9rem;
+  position: relative;
+  padding: 18px 30px;
+  border: 4px solid #A8CE81;
+  background-image: url('../assets/fonknopka.png');
+  background-size: fill;
+  background-position: center;
+  color: white;
+  text-shadow: 2px 2px 0 #000;
+  border-radius: 0;
+  letter-spacing: 1px;
+  transition: 0.3s;
+  white-space: normal;
+  word-wrap: break-word;
+  z-index: 2;
+  border-radius: 15px;
+}
+
+.backText {
+  background-color: #00000064;
+}
+
+.btn-custom:hover {
+  transform: scale(1.02);
+  box-shadow: 0 0 25px #A8CE81;
+  border-color: #c0e0a0;
+}
+
+@media (max-width: 576px) {
+  .master-phrase {
+    font-size: 1.5rem;
+  }
+  .btn-custom {
+    font-size: 0.7rem;
+    padding: 15px 20px;
+  }
+}
