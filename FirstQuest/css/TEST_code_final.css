@@ -36,6 +36,13 @@ body {
     border: 1px solid rgba(255, 215, 150, 0.3);
     border-radius: 20px;
     backdrop-filter: blur(8px);
+    transition: all 0.3s ease-out;
+}
+
+.quest-card:hover {
+    border-color: rgba(255, 215, 150, 0.6);
+    box-shadow: 0 8px 20px rgba(253, 216, 112, 0.1);
+    transform: translateY(-3px);
 }
 
 .quest-title {
@@ -105,3 +112,112 @@ body {
     border-left: 4px solid #fdd870;
     padding: 10px;
 }
+
+/* ===== АНИМАЦИИ (легко удалить если нужно) ===== */
+
+/* 1. FLOATING - плавающие элементы */
+@keyframes floatAnim {
+    0%, 100% { transform: translateY(0px); }
+    50% { transform: translateY(-20px); }
+}
+.float {
+    animation: floatAnim 3s ease-in-out infinite;
+}
+
+/* 2. PULSE - пульсация/свечение */
+@keyframes pulseAnim {
+    0%, 100% { opacity: 1; box-shadow: 0 0 5px rgba(255, 215, 0, 0.7); }
+    50% { opacity: 0.7; box-shadow: 0 0 25px rgba(255, 215, 0, 1); }
+}
+.pulse {
+    animation: pulseAnim 2s ease-in-out infinite;
+}
+
+/* 3. SLIDE IN - появление скольжением */
+@keyframes slideInUpAnim {
+    from {
+        opacity: 0;
+        transform: translateY(100px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+.slide-in {
+    animation: slideInUpAnim 0.8s ease-out;
+}
+
+/* 4. ROTATE - вращение */
+@keyframes rotateAnim {
+    from { transform: rotate(0deg); }
+    to { transform: rotate(360deg); }
+}
+.rotate {
+    animation: rotateAnim 3s linear infinite;
+}
+
+/* 5. BOUNCE - отскоки */
+@keyframes bounceAnim {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-30px); }
+}
+.bounce {
+    animation: bounceAnim 0.8s infinite;
+}
+
+/* 6. GLOW EFFECT - свечение текста */
+@keyframes glowAnim {
+    0%, 100% { 
+        text-shadow: 0 0 5px #fdd870, 0 0 10px rgba(253, 216, 112, 0.5);
+    }
+    50% { 
+        text-shadow: 0 0 20px #fdd870, 0 0 30px rgba(253, 216, 112, 0.8);
+    }
+}
+.glow-text {
+    animation: glowAnim 2s ease-in-out infinite;
+}
+
+/* 7. SCALE HOVER - увеличение при наведении */
+.scale-hover {
+    transition: transform 0.3s ease;
+}
+.scale-hover:hover {
+    transform: scale(1.1);
+}
+
+/* 8. SHAKE - тряска/землетрясение */
+@keyframes shakeAnim {
+    0%, 100% { transform: translateX(0); }
+    25% { transform: translateX(-5px); }
+    75% { transform: translateX(5px); }
+}
+.shake-anim {
+    animation: shakeAnim 0.5s;
+}
+
+/* 9. STAGGER - волна появления (используй с nth-child) */
+.stagger {
+    opacity: 0;
+    transform: translateY(20px);
+    animation: slideInUpAnim 0.6s ease-out forwards;
+}
+.stagger:nth-child(1) { animation-delay: 0s; }
+.stagger:nth-child(2) { animation-delay: 0.2s; }
+.stagger:nth-child(3) { animation-delay: 0.4s; }
+.stagger:nth-child(4) { animation-delay: 0.6s; }
+
+/* 10. GRADIENT SHIFT - анимация градиента */
+@keyframes gradientShift {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+.gradient-bg {
+    background: linear-gradient(-45deg, #fdd870, #ff6b6b, #4ecdc4, #fdd870);
+    background-size: 400% 400%;
+    animation: gradientShift 15s ease infinite;
+}
+
+/* ===== КОНЕЦ АНИМАЦИЙ ===== */

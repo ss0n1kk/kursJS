@@ -28,8 +28,8 @@
     <div class="row g-4 h-100 reveal">
         
         <div class="col-md-5">
-            <div class="quest-card p-4 h-100">
-                <h2 class="quest-title mb-4">Свиток Задания</h2>
+            <div class="quest-card p-4 h-100 slide-in">
+                <h2 class="quest-title mb-4 glow-text">Свиток Задания</h2>
                 <div class="quest-description">
                     <p>Создай магические сосуды* для инвентаря:</p>
                     <ul>
@@ -39,7 +39,7 @@
                     </ul>
                     <p>Затем создай сосуд* <span class="textRed">storage</span>, где сложи всё вместе<span class="text-warning">(СОСУДЫ!! НЕ ЧИСЛА!!)</span> в порядке УБЫВАНИЯ от большего к меньшему, <br>и выведи результат <span class="textGreen">в Магическое Зеркало**</span>!</p>
                 </div>
-                <button id="hintBtn" class="wood-btn btn-accept mt-4">Вспомнить слова Магистра (Подсказка)</button>
+                <button id="hintBtn" class="wood-btn btn-accept mt-4 scale-hover">Вспомнить слова Магистра (Подсказка)</button>
                 <p class="mt-4 text-white-50">
                     * сосуд = переменная <br>
                     ** магическое зеркало = консоль
@@ -49,7 +49,7 @@
         </div>
 
         <div class="col-md-7">
-            <div class="editor-container d-flex flex-column h-100">
+            <div class="editor-container d-flex flex-column h-100 scale-hover">
                 <div class="editor-top p-2 px-3">
                     JavaScript
                 </div>
@@ -62,7 +62,7 @@
                 </div>
 
                 <div class="p-2 bg-black-50 text-center border-top border-bottom border-secondary">
-                    <button id="checkCodeBtn" class="wood-btn btn-accept w-75 py-2" style="font-size: 0.8rem;">Проверить код</button>
+                    <button id="checkCodeBtn" class="wood-btn btn-accept w-75 py-2 scale-hover" style="font-size: 0.8rem;">Проверить код</button>
                 </div>
 
                 <div class="editor-bottom p-3 text-center">
@@ -70,7 +70,7 @@
                         <p id="feedbackText" class="m-0 small"></p>
                     </div>
                     <a class="text-decoration-none" href="reward.html">
-                        <button id="finishQuestBtn" class="d-none wood-btn btn-decline w-100">Завершить квест</button>
+                        <button id="finishQuestBtn" class="d-none wood-btn btn-decline w-100 scale-hover pulse">Завершить квест</button>
                     </a>
                 </div>
             </div>

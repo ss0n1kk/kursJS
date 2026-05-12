@@ -30,7 +30,7 @@
         <!--приветствие-->
         <div class="row justify-content-start mb-5">
             <div class="col-md-7 col-lg-6">
-                <div class="greeting-card">
+                <div class="greeting-card slide-in">
                     <p class="fs-5 fst-italic mb-0">«Эти развалины помнят былое величие Цитадели...» — шепчет Магистр. <br>
         «Докажи, что ты усвоил уроки Гримуара. Каждый верный ответ восстанавливает магическую цепь. 
         Когда цепь замкнется — откроется портал в единственное уцелевшее место в этом секторе... в Таверну».</p>
@@ -41,8 +41,8 @@
         <div class="row justify-content-start">
             <div class="col-12 col-lg-7">
                 <!-- 1 переменные -->
-                <div class="question-card" id="q1">
-                    <div class="question-title">Вопрос 1/6: Выберите <strong class="text-warning">ВСЕ</strong> верные имена переменных</div>
+                <div class="question-card slide-in" id="q1">
+                    <div class="question-title glow-text">Вопрос 1/6: Выберите <strong class="text-warning">ВСЕ</strong> верные имена переменных</div>
                     <div class="code-widget mb-3">
                         <div class="code-header">Правила именования</div>
                         <div class="code-content">
@@ -62,11 +62,11 @@
                         <li><input class="form-check-input" type="checkbox" value="const" id="opt1_8"> <label class="form-check-label" for="opt1_8">const</label></li>
                     </ul>
 
-                    <button id="testResult" class="btn btn-outline-warning mt-3 w-100 check-btn">Проверить ответ</button>
+                    <button id="testResult" class="btn btn-outline-warning mt-3 w-100 check-btn scale-hover">Проверить ответ</button>
                 </div>
 
                 <!-- 2 консоль с x y -->
-                <div class="question-card d-none" id="q2">
+                <div class="question-card d-none slide-in" id="q2">
                     <div class="question-title">Вопрос 2/6: Что выведет этот код?</div>
                     <div class="code-widget">
                         <div class="code-header">JavaScript</div>
@@ -83,11 +83,11 @@
                         <li><input class="form-check-input" type="radio" name="q2" value="error"> <label class="form-check-label">Ошибка</label></li>
                     </ul>
 
-                    <button id="testResult" class="btn btn-outline-warning mt-3 w-100 check-btn">Проверить ответ</button>
+                    <button id="testResult" class="btn btn-outline-warning mt-3 w-100 check-btn scale-hover">Проверить ответ</button>
                 </div>
 
                 <!-- 3 консоль лог с let -->
-                <div class="question-card d-none" id="q3">
+                <div class="question-card d-none slide-in" id="q3">
                     <div class="question-title">Вопрос 3/6: Какое значение будет в переменной <span class="text-info">price</span> после выполнения?</div>
                     <div class="code-widget">
                         <div class="code-header">JavaScript</div>
@@ -105,11 +105,11 @@
                         <li><input class="form-check-input" type="radio" name="q3" value="10"> <label class="form-check-label">10</label></li>
                     </ul>
 
-                    <button class="btn btn-outline-warning mt-3 w-100 check-btn">Проверить ответ</button>
+                    <button class="btn btn-outline-warning mt-3 w-100 check-btn scale-hover">Проверить ответ</button>
                 </div>
 
                 <!-- 4 const myBirthYear -->
-                <div class="question-card d-none" id="q4">
+                <div class="question-card d-none slide-in" id="q4">
                     <div class="question-title">Вопрос 4/6: Как правильно объявить константу с именем <span class="text-info">myBirthYear</span>?</div>
                     <ul class="options-list">
                         <li><input class="form-check-input" type="radio" name="q4" value="const myBirthYear = 1995;"> <label class="form-check-label">const myBirthYear = 1995;</label></li>
@@ -118,11 +118,11 @@
                         <li><input class="form-check-input" type="radio" name="q4" value="const 1myBirthYear = 1995;"> <label class="form-check-label">const 1myBirthYear = 1995;</label></li>
                     </ul>
 
-                    <button id="testResult" class="btn btn-outline-warning mt-3 w-100 check-btn">Проверить ответ</button>
+                    <button id="testResult" class="btn btn-outline-warning mt-3 w-100 check-btn scale-hover">Проверить ответ</button>
                 </div>
 
                 <!-- 5 Привет, Алекс! -->
-                <div class="question-card d-none" id="q5">
+                <div class="question-card d-none slide-in" id="q5">
                     <div class="question-title">Вопрос 5/6: Что выведет консоль?</div>
                     <div class="code-widget">
                         <div class="code-header">JavaScript</div>
@@ -138,11 +138,11 @@
                         <li><input class="form-check-input" type="radio" name="q5" value="Ошибка"> <label class="form-check-label">Ошибка</label></li>
                     </ul>
                     
-                    <button id="testResult" class="btn btn-outline-warning mt-3 w-100 check-btn">Проверить ответ</button>
+                    <button class="btn btn-outline-warning mt-3 w-100 check-btn scale-hover">Проверить ответ</button>
                 </div>
 
                 <!-- 6 коментарий /* */ -->
-                <div class="question-card d-none" id="q6">
+                <div class="question-card d-none slide-in" id="q6">
                     <div class="question-title">Вопрос 6/6: Какой комментарий является <strong>многострочным в Java Script</strong>?</div>
                     <ul class="options-list">
                         <li><input class="form-check-input" type="radio" name="q6" value="// текст"> <label class="form-check-label">// текст</label></li>
@@ -151,7 +151,7 @@
                         <li><input class="form-check-input" type="radio" name="q6" value="# текст"> <label class="form-check-label"># текст</label></li>
                     </ul>
 
-                    <button id="testResult" class="btn btn-outline-warning mt-3 w-100 check-btn">Проверить ответ</button>
+                    <button id="testResult" class="btn btn-outline-warning mt-3 w-100 check-btn scale-hover">Проверить ответ</button>
                 </div>
 
                 <div id="testResult" class="result-badge" style="display: none;"></div>
@@ -162,9 +162,9 @@
     <div class="d-none d-flex justify-content-center align-items-center text-center mb-5 row" id="portal-container">
         <h1 class="mb-4 col-12 shaky-text">Ты успешно завершил испытание! <br> Направляйся в <span class="">таверну</span> через портал!</h1>
         
-        <a href="tavern.html" class="text-decoration-none">
+        <a href="tavern.html" class="text-decoration-none scale-hover">
             <img 
-                class="portal portal-appearance" 
+                class="portal portal-appearance pulse" 
                 src="../../assets/портал-no-bg-preview (carve.photos).png" 
                 alt="портал-кнопка" 
                 style="max-width: 500px;">
