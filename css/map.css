@@ -13,7 +13,7 @@
 }
 
 body {
-    background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('../assets/фонкартынорм.jpg');
+    background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('/../assets/фонкартынорм.jpg');
     background-size: cover;
     background-position: center;
     background-attachment: fixed;
@@ -58,7 +58,7 @@ body {
 }
 
 .quest-body {
-        background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('../assets/mobback.png');
+    background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url(/assets/mobback.png);
     border-radius: 2rem;
     border: 4px solid #fdd870;
     padding: 2rem 1rem;
@@ -88,19 +88,6 @@ body {
 .start-photo:hover {
     transform: scale(1.05);
     border-color: #00ff9f;
-}
-
-.blur-overlay {
-    background: rgba(0, 0, 0, 0.27);
-    backdrop-filter: blur(8px);
-    transition: 0.2s;
-    cursor: not-allowed;
-}
-
-.lock-icon {
-    font-size: 3rem;
-    color: #fdd870;
-    margin-bottom: 0.75rem;
 }
 
 .card-title {
@@ -140,6 +127,35 @@ body {
     font-weight: 600;
 }
 
+.soon{
+    box-shadow: 0 20px 0 #424242;
+    border: 4px solid #424242;
+}
+
+.text-soon{
+    color: #9a9a9a;
+}
+
+.blur-overlay {
+    background: rgba(0, 0, 0, 0.27);
+    backdrop-filter: blur(8px);
+    transition: 0.2s;
+    cursor: not-allowed;
+}
+
+.lock-icon {
+    font-size: 3rem;
+    color: #424242;
+    margin-bottom: 0.75rem;
+}
+
+.mt-8 {
+    margin-top: 4rem;
+}
+.mb-6 {
+    margin-bottom: 3rem;
+}
+
 @media (max-width: 768px) {
     .nav-link-custom {
         font-size: 0.55rem;
@@ -166,119 +182,3 @@ body {
         min-height: auto;
     }
 }
-
-.mt-8 {
-    margin-top: 4rem;
-}
-.mb-6 {
-    margin-bottom: 3rem;
-}
-
-/* ===== АНИМАЦИИ (легко удалить если нужно) ===== */
-
-/* 1. FLOATING - плавающие элементы */
-@keyframes float {
-    0%, 100% { transform: translateY(0px); }
-    50% { transform: translateY(-20px); }
-}
-.float {
-    animation: float 3s ease-in-out infinite;
-}
-
-/* 2. PULSE - пульсация/свечение */
-@keyframes pulse {
-    0%, 100% { opacity: 1; box-shadow: 0 0 5px rgba(255, 215, 0, 0.7); }
-    50% { opacity: 0.7; box-shadow: 0 0 25px rgba(255, 215, 0, 1); }
-}
-.pulse {
-    animation: pulse 2s ease-in-out infinite;
-}
-
-/* 3. SLIDE IN - появление скольжением */
-@keyframes slideInUp {
-    from {
-        opacity: 0;
-        transform: translateY(100px);
-    }
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
-}
-.slide-in {
-    animation: slideInUp 0.8s ease-out;
-}
-
-/* 4. ROTATE - вращение */
-@keyframes rotate {
-    from { transform: rotate(0deg); }
-    to { transform: rotate(360deg); }
-}
-.rotate {
-    animation: rotate 3s linear infinite;
-}
-
-/* 5. BOUNCE - отскоки */
-@keyframes bounce {
-    0%, 100% { transform: translateY(0); }
-    50% { transform: translateY(-30px); }
-}
-.bounce {
-    animation: bounce 0.8s infinite;
-}
-
-/* 6. GLOW EFFECT - свечение текста */
-@keyframes glow {
-    0%, 100% { 
-        text-shadow: 0 0 5px #fdd870, 0 0 10px rgba(253, 216, 112, 0.5);
-    }
-    50% { 
-        text-shadow: 0 0 20px #fdd870, 0 0 30px rgba(253, 216, 112, 0.8);
-    }
-}
-.glow-text {
-    animation: glow 2s ease-in-out infinite;
-}
-
-/* 7. SCALE HOVER - увеличение при наведении */
-.scale-hover {
-    transition: transform 0.3s ease;
-}
-.scale-hover:hover {
-    transform: scale(1.1);
-}
-
-/* 8. SHAKE - тряска/землетрясение */
-@keyframes shake {
-    0%, 100% { transform: translateX(0); }
-    25% { transform: translateX(-5px); }
-    75% { transform: translateX(5px); }
-}
-.shake-anim {
-    animation: shake 0.5s;
-}
-
-/* 9. STAGGER - волна появления (используй с nth-child) */
-.stagger {
-    opacity: 0;
-    transform: translateY(20px);
-    animation: slideInUp 0.6s ease-out forwards;
-}
-.stagger:nth-child(1) { animation-delay: 0s; }
-.stagger:nth-child(2) { animation-delay: 0.2s; }
-.stagger:nth-child(3) { animation-delay: 0.4s; }
-.stagger:nth-child(4) { animation-delay: 0.6s; }
-
-/* 10. GRADIENT SHIFT - анимация градиента */
-@keyframes gradient-shift {
-    0% { background-position: 0% 50%; }
-    50% { background-position: 100% 50%; }
-    100% { background-position: 0% 50%; }
-}
-.gradient-bg {
-    background: linear-gradient(-45deg, #fdd870, #ff6b6b, #4ecdc4, #fdd870);
-    background-size: 400% 400%;
-    animation: gradient-shift 15s ease infinite;
-}
-
-/* ===== КОНЕЦ АНИМАЦИЙ ===== */

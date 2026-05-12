@@ -13,21 +13,14 @@
 
 .imgKurs{
     width: 240px;
-    animation: slideInDown 0.8s ease-out;
 }
 
 .imgJS {
     width: 900px;
-    animation: slideInUp 0.9s ease-out 0.2s both;
 }
 
 .arrowsL, .arrowsR{
     width: 150px;
-    transition: transform 0.4s ease-out;
-}
-
-.arrowsL:hover, .arrowsR:hover {
-    animation: floatArrow 0.6s ease-in-out;
 }
 
 .text{
@@ -38,12 +31,6 @@
     border-radius: 50%;
     max-height: 250px;
     box-shadow: 0 5px 0 #839965;
-    transition: all 0.3s ease-out;
-}
-
-.roundImg:hover {
-    transform: scale(1.05);
-    box-shadow: 0 8px 20px rgba(131, 153, 101, 0.4), 0 5px 0 #839965;
 }
 
 h4, h3, h5{
@@ -75,14 +62,9 @@ p{
     box-sizing: border-box;
     margin-top: 10%;
     margin-bottom: 10%;
-    box-shadow: 0.3em 0.3em 1em rgba(102, 97, 97, 0.6);
+    box-shadow: 
+    0.3em 0.3em 1em rgba(102, 97, 97, 0.6);
     border-radius: 20px;
-    transition: all 0.4s ease-out;
-}
-
-.custom-card:hover {
-    transform: translateY(-8px);
-    box-shadow: 0.3em 0.5em 1.5em rgba(102, 97, 97, 0.8);
 }
 
 .card-text h4{
@@ -136,37 +118,3 @@ p{
     .img-btn { width: 400px; overflow: hidden; margin-bottom: auto;}
     footer { margin-top: auto; }
 }
-
-/* ===== ЭЛЕГАНТНЫЕ АНИМАЦИИ ДЛЯ ГЛАВНОЙ СТРАНИЦЫ ===== */
-
-/* Плавное появление сверху */
-@keyframes slideInDown {
-    from {
-        opacity: 0;
-        transform: translateY(-40px);
-    }
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
-}
-
-/* Плавное появление снизу */
-@keyframes slideInUp {
-    from {
-        opacity: 0;
-        transform: translateY(40px);
-    }
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
-}
-
-/* Лёгкий плавающий эффект для стрелок */
-@keyframes floatArrow {
-    0%, 100% { transform: translateY(0px); }
-    50% { transform: translateY(-15px); }
-}
-
-/* ===== КОНЕЦ ЭЛЕГАНТНЫХ АНИМАЦИЙ ===== */

@@ -10,7 +10,10 @@
     <link rel="stylesheet" href="css/header-footer.css">
 
     <script src="js/TEST_code_final.js" defer></script>
-    <script src="../../js/observer.js" defer></script>
+    <script src="/js/observer.js" defer></script>
+
+        <link rel="shortcut icon" href="/../assets/javascript icon.png" type="image/x-icon">
+</head>
 <body class="d-flex flex-column min-vh-100">
 
 <header class="p-1">
@@ -20,16 +23,16 @@
             <div class="progress-bar bg-warning" role="progressbar" style="width: 99%;" aria-valuenow="99" aria-valuemin="0" aria-valuemax="100"></div>
         </div>
         <p class="mt-2 small text-white-50">Прогресс: 99% — шаг 5 из 5</p>
-        <h2 class="mb-4 text-white-50" style="font-size: 1rem;">Таверна | Финальный квест</h2>
+        <h2 class="mb-4 text-white-50" style="font-size: 1rem;">Руины Цитадели | Таверна | Финальный квест</h2>
     </div>
 </header>
 
 <main class="container py-4 flex-grow-1">
-    <div class="row g-4 h-100 reveal">
+    <div class="row g-4 h-100 reveal p-5">
         
         <div class="col-md-5">
-            <div class="quest-card p-4 h-100 slide-in">
-                <h2 class="quest-title mb-4 glow-text">Свиток Задания</h2>
+            <div class="quest-card p-4 h-100">
+                <h2 class="quest-title mb-4">Свиток Задания</h2>
                 <div class="quest-description">
                     <p>Создай магические сосуды* для инвентаря:</p>
                     <ul>
@@ -39,7 +42,7 @@
                     </ul>
                     <p>Затем создай сосуд* <span class="textRed">storage</span>, где сложи всё вместе<span class="text-warning">(СОСУДЫ!! НЕ ЧИСЛА!!)</span> в порядке УБЫВАНИЯ от большего к меньшему, <br>и выведи результат <span class="textGreen">в Магическое Зеркало**</span>!</p>
                 </div>
-                <button id="hintBtn" class="wood-btn btn-accept mt-4 scale-hover">Вспомнить слова Магистра (Подсказка)</button>
+                <button id="hintBtn" class="wood-btn btn-accept mt-4">Вспомнить слова Магистра (Подсказка)</button>
                 <p class="mt-4 text-white-50">
                     * сосуд = переменная <br>
                     ** магическое зеркало = консоль
@@ -49,7 +52,7 @@
         </div>
 
         <div class="col-md-7">
-            <div class="editor-container d-flex flex-column h-100 scale-hover">
+            <div class="editor-container d-flex flex-column h-100">
                 <div class="editor-top p-2 px-3">
                     JavaScript
                 </div>
@@ -62,7 +65,7 @@
                 </div>
 
                 <div class="p-2 bg-black-50 text-center border-top border-bottom border-secondary">
-                    <button id="checkCodeBtn" class="wood-btn btn-accept w-75 py-2 scale-hover" style="font-size: 0.8rem;">Проверить код</button>
+                    <button id="checkCodeBtn" class="wood-btn btn-accept w-75 py-2" style="font-size: 0.8rem;">Проверить код</button>
                 </div>
 
                 <div class="editor-bottom p-3 text-center">
@@ -70,14 +73,39 @@
                         <p id="feedbackText" class="m-0 small"></p>
                     </div>
                     <a class="text-decoration-none" href="reward.html">
-                        <button id="finishQuestBtn" class="d-none wood-btn btn-decline w-100 scale-hover pulse">Завершить квест</button>
+                        <button id="finishQuestBtn" class="d-none wood-btn btn-decline w-100">Завершить квест</button>
                     </a>
                 </div>
             </div>
         </div>
 
     </div>
+
+    <div class="row justify-content-center mb-5">
+        <div class="col-12 col-lg-10">
+            <div class="lore-container p-4">
+                <p class="lore-text mb-3">
+                    Трактирщик Фрирен заинтригована — не каждый день в её заведении открываются порталы прямо из Цитадели. <span class="gold-text">Время применить знания</span>, полученные из Гримуара, на практике. Магия чисел и переменных — это фундамент, на котором держится весь Веб-Ленд.
+                </p>
+                <p class="lore-instruction mb-0">
+                    <i class="bi bi-shield-lock-fill me-2 gold-text"></i>
+                    Внимательно изучи записи в свитке. Тебе нужно не просто объявить переменные, но и правильно <span class="gold-text">просуммировать их</span>. Помни наставление Магистра: компьютер видит разницу между <code class="text-warning">"10"</code> и <code class="text-warning">10</code>. Помоги Фрирен с расчетами, и <span class="gold-text">Первый Осколок Ключа</span> станет твоим!
+                </p>
+                <div class="mt-3 text-end">
+                    <small class="text-white-50 italic">Твой путь к истинному могуществу почти завершен...</small>
+                </div>
+            </div>
+        </div>
+    </div>
 </main>
+
+<!-- 
+let aleBarrels = 12
+let honeyJugs = 5
+let potionBottles = 8
+let storage = aleBarrels + potionBottles + honeyJugs
+console.log(storage)
+-->
 
 <footer class="bg-dark text-white py-5 text-center mt-auto">
     <div class="container">
@@ -95,8 +123,8 @@
             <div class="col-md-4 mb-4">
                 <h5 class="fw-bold">Навигация</h5>
                 <ul class="list-unstyled">
-                    <li><a href="index.html" class="text-white-50 text-decoration-none">На главную</a></li>
-                    <li><a href="map.html" class="text-white-50 text-decoration-none">Карта заданий</a></li>
+                    <li><a href="/../index.html" class="text-white-50 text-decoration-none">На главную</a></li>
+                    <li><a href="/../map.html" class="text-white-50 text-decoration-none">Карта заданий</a></li>
                 </ul>
             </div>
         </div>
