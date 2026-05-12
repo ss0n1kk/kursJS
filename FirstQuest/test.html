@@ -11,13 +11,13 @@
     <link rel="stylesheet" href="css/header-footer.css">
 
     <script src="js/test.js" defer></script>
+    <script src="/js/observer.js" defer></script>
 </head>
 <body>
 
 <header class="p-1">
     <div class="container text-center">
-        <a class="text-decoration-none text-light m-0" href="grimuar.html" style="font-size: xx-large;">↩︎</a>
-        <h1 class="mb-4" style="font-size: large;">Знакомство с Java Script</h1>
+        <a class="text-decoration-none text-light mb-2 arrowNav" href="grimuar.html" style="font-size: xx-large;">↩︎</a>
         <div class="progress mx-auto" style="max-width: 400px; height: 12px;">
             <div class="progress-bar bg-warning" role="progressbar" style="width: 60%;" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100"></div>
         </div>
@@ -27,8 +27,7 @@
 </header>
 
 <main>
-    <button class="skip">я крутой</button>
-    <div class="container py-4">
+    <div class="container py-4 reveal">
         <!--приветствие-->
         <div class="row justify-content-start mb-5">
             <div class="col-md-7 col-lg-6">
@@ -44,7 +43,7 @@
             <div class="col-12 col-lg-7">
                 <!-- 1 переменные -->
                 <div class="question-card" id="q1">
-                    <div class="question-title">Вопрос 1: Выберите <strong class="text-warning">ВСЕ</strong> верные имена переменных</div>
+                    <div class="question-title">Вопрос 1/6: Выберите <strong class="text-warning">ВСЕ</strong> верные имена переменных</div>
                     <div class="code-widget mb-3">
                         <div class="code-header">Правила именования</div>
                         <div class="code-content">
@@ -69,7 +68,7 @@
 
                 <!-- 2 консоль с x y -->
                 <div class="question-card d-none" id="q2">
-                    <div class="question-title">Вопрос 2: Что выведет этот код?</div>
+                    <div class="question-title">Вопрос 2/6: Что выведет этот код?</div>
                     <div class="code-widget">
                         <div class="code-header">JavaScript</div>
                         <div class="code-content">
@@ -90,7 +89,7 @@
 
                 <!-- 3 консоль лог с let -->
                 <div class="question-card d-none" id="q3">
-                    <div class="question-title">Вопрос 3: Какое значение будет в переменной <span class="text-info">price</span> после выполнения?</div>
+                    <div class="question-title">Вопрос 3/6: Какое значение будет в переменной <span class="text-info">price</span> после выполнения?</div>
                     <div class="code-widget">
                         <div class="code-header">JavaScript</div>
                         <div class="code-content">
@@ -112,7 +111,7 @@
 
                 <!-- 4 const myBirthYear -->
                 <div class="question-card d-none" id="q4">
-                    <div class="question-title">Вопрос 4: Как правильно объявить константу с именем <span class="text-info">myBirthYear</span>?</div>
+                    <div class="question-title">Вопрос 4/6: Как правильно объявить константу с именем <span class="text-info">myBirthYear</span>?</div>
                     <ul class="options-list">
                         <li><input class="form-check-input" type="radio" name="q4" value="const myBirthYear = 1995;"> <label class="form-check-label">const myBirthYear = 1995;</label></li>
                         <li><input class="form-check-input" type="radio" name="q4" value="let myBirthYear = 1995;"> <label class="form-check-label">let myBirthYear = 1995;</label></li>
@@ -125,7 +124,7 @@
 
                 <!-- 5 Привет, Алекс! -->
                 <div class="question-card d-none" id="q5">
-                    <div class="question-title">Вопрос 5: Что выведет консоль?</div>
+                    <div class="question-title">Вопрос 5/6: Что выведет консоль?</div>
                     <div class="code-widget">
                         <div class="code-header">JavaScript</div>
                         <div class="code-content">
@@ -145,7 +144,7 @@
 
                 <!-- 6 коментарий /* */ -->
                 <div class="question-card d-none" id="q6">
-                    <div class="question-title">Вопрос 6: Какой комментарий является <strong>многострочным в Java Script</strong>?</div>
+                    <div class="question-title">Вопрос 6/6: Какой комментарий является <strong>многострочным в Java Script</strong>?</div>
                     <ul class="options-list">
                         <li><input class="form-check-input" type="radio" name="q6" value="// текст"> <label class="form-check-label">// текст</label></li>
                         <li><input class="form-check-input" type="radio" name="q6" value="/* текст */"> <label class="form-check-label">/* текст */</label></li>
@@ -162,13 +161,14 @@
     </div>
 
     <div class="d-none d-flex justify-content-center align-items-center text-center mb-5 row" id="portal-container">
-        <h1 class="mb-4 col-12 bigTextH1" style="font-size: large;">Ты успешно завершил испытание! <br> Направляйся в <span class="">таверну</span> через портал!</h1>
+        <h1 class="mb-4 col-12 shaky-text">Ты успешно завершил испытание! <br> Направляйся в <span class="">таверну</span> через портал!</h1>
+        
         <a href="tavern.html" class="text-decoration-none">
-        <img 
-            class="" 
-            src="/assets/портал-no-bg-preview (carve.photos).png" 
-            alt="портал-кнопка" 
-            style="max-width: 500px;">
+            <img 
+                class="portal portal-appearance" 
+                src="/assets/портал-no-bg-preview (carve.photos).png" 
+                alt="портал-кнопка" 
+                style="max-width: 500px;">
         </a>
     </div>
 </main>
@@ -179,9 +179,7 @@
             <div class="col-md-4 mb-4">
                 <h5 class="fw-bold">Наши контакты:</h5>
                 <ul class="list-unstyled">
-                    <li><a href="#" class="text-white-50 text-decoration-none">Gmail</a></li>
-                    <li><a href="#" class="text-white-50 text-decoration-none">Telegram</a></li>
-                    <li><a href="#" class="text-white-50 text-decoration-none">TikTok</a></li>
+                    <li><a href="#" class="text-white-50 text-decoration-none">Почта - 1paladinsgg1@gmail.com</a></li>
                 </ul>
             </div>
             <div class="col-md-4 mb-4">
@@ -189,12 +187,10 @@
                 <p class="text-white-50">© 2026 JS Курс. Бесплатное обучение программированию.</p>
             </div>
             <div class="col-md-4 mb-4">
-                <h5 class="fw-bold">Курсы</h5>
+                <h5 class="fw-bold">Навигация</h5>
                 <ul class="list-unstyled">
-                    <li><a href="kurs.html" class="text-white-50 text-decoration-none">JavaScript</a></li>
-                    <li><a class="text-white-50 text-decoration-line-through">PHP</a></li>
-                    <li><a class="text-white-50 text-decoration-line-through">Python</a></li>
-                    <li><a class="text-white-50 text-decoration-line-through">Java</a></li>
+                    <li><a href="index.html" class="text-white-50 text-decoration-none">На главную</a></li>
+                    <li><a href="map.html" class="text-white-50 text-decoration-none">Карта заданий</a></li>
                 </ul>
             </div>
         </div>

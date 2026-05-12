@@ -47,7 +47,6 @@ for (let i = 0; i < cards.length; i++) {
             if (nextCard) {
                 nextCard.classList.remove('d-none');
             } else {
-                alert("Магистр: 'Система стабилизирована! Портал открыт. Спеши в Таверну и поговори с трактирщиком!'");
                 let portal = document.getElementById('portal-container');
                 let greetingMessage = document.querySelector(`.greeting-card`);
 
@@ -59,25 +58,3 @@ for (let i = 0; i < cards.length; i++) {
         }
     });
 }
-
-
-/* удалить потом */
-let skipBtn = document.querySelector('.skip');
-
-skipBtn.addEventListener('click', function() {
-    for (let i = 0; i < cards.length; i++) {
-        cards[i].classList.add('d-none');
-    }
-
-    let greetingMessage = document.querySelector('.greeting-card');
-    if (greetingMessage) {
-        greetingMessage.classList.add('d-none');
-    }
-
-    let portal = document.getElementById('portal-container');
-    if (portal) {
-        portal.classList.remove('d-none');
-    }
-    
-    console.log("Маг применил заклинание левитации и пропустил все ловушки!");
-});

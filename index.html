@@ -1,141 +1,268 @@
 <!DOCTYPE html>
-<html lang="ru">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Бесплатный курс по JavaScript</title>
+    <title>Курс JS | Главная</title>
+    <link rel="stylesheet" href="css/kurs.css">
+
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
-    <link rel="stylesheet" href="css/index.css">
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous" defer></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
+    <script src="js/observer.js" defer></script>
 </head>
 <body style="background-color: #F5F5F5;">
-
-    <header>
-        <nav class="navbar navbar-expand-lg bg-light fixed-top">
-            <div class="container">
-                <a class="navbar-brand" href="index.html">JS Курс</a>
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Переключить навигацию">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-                <div class="collapse navbar-collapse" id="navbarNav">
-                    <ul class="navbar-nav ms-auto gap-4 p-3">
-                        <li class="nav-item"><a class="nav-link" href="#kursi">Курсы</a></li>
-                        <li class="nav-item"><a class="nav-link" href="#">Новости</a></li>
-                        <li class="nav-item"><a class="nav-link" href="#">Контакты</a></li>
-                    </ul>
-                   <!-- <ul class="navbar-nav ms-auto" style="gap: 94px;">
-                        <li class="nav-item"><a class="nav-link text-decoration-underline" href="login.html">Авторизация</a></li>
-                    </ul> -->
-                </div>
-            </div>
-        </nav>
-    </header>
-
-    <main>
-        <section class="py-5 mt-8">
-            <div class="container containerMax" id="kursi">
-                <h1 class="mb-3">Курсы по программированию</h1>
-                <p class="lead">Бесплатное обучение языкам программирования с нуля онлайн. Легкая, понятная теория, практика после каждого урока и современные методы. Подходит школьникам, студентам и взрослым.</p>
-            </div>
-        </section>
-
-        <section class="mt-4">
-            <div class="container containerMax">
-                <div class="row g-4">
-                    <div class="col-12">
-                        <div class="card rounded-4 border-0">
-                            <div class="card-img-top square-img" style="height: 200px; ">
-                                <img src="assets/javascript icon.png" alt="" class="img-fluid mt-5">
-                            </div>
-                            <div class="card-body">
-                                <h5 class="card-title">Старт в Java Script</h5>
-                                <p class="card-text">0 рублей / навсегда</p>
-                                <a href="kurs.html">
-                                    <button class="btn btn-success">Начать</button>
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <section class="mt-8">
-            <div class="container containerMax">
-                <h2 class="mb-4">Разбираем вопросы</h2>
-            </div>
-        </section>
-
-        <section class="mt-5">
-            <div class="container containerMax">
-                <div class="row g-4">
-                    <div class="col-md-6">
-                        <div class="p-3 h-100">
-                            <h6 class="text-start">Подходят ли ваши курсы для детей?</h6>
-                            <p class="text-start">Да, программа подходит для детей от 12 лет</p>
-                        </div>
-                    </div>
-                    <div class="col-md-6">
-                        <div class="p-3 h-100">
-                            <h6 class="text-start">Какой язык программирования стоит выбрать?</h6>
-                            <p class="text-start">Исходите из количества вакансий в том регионе, в котором вы живете или куда собираетесь переехать. Если же вам не принципиально, то мы предлагаем такой приоритет: JavaScript, PHP, Python, Java</p>
-                        </div>
-                    </div>
-                    <div class="col-md-6">
-                        <div class="p-3 h-100">
-                            <h6 class="text-start">Какой сериал по программированию стоит посмотреть?</h6>
-                            <p class="text-start">Мы рекомендуем сериал "Силиконовая долина"</p>
-                        </div>
-                    </div>
-                    <div class="col-md-6">
-                        <div class="p-3 h-100">
-                            <h6 class="text-start">Какой язык программирования лучший?</h6>
-                            <p class="text-start">Плохих языков программирования не существует, каждый подход для решения определенных задач, выбирайте тот, который вам по душе и учите.</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <section class="mt-8">
-            <div class="container containerMax">
-                <h3>Новости</h3>
-            </div>
-        </section>
-
-        <section class="pb-5">
-            <div class="container">
-                <p>Актуальные новости регулярно выпускаются в официальном <a class="text-decoration-none" href="google.com">телеграм канале</a>, подпишитесь, чтобы быть в курсе всех новостей.</p>
-            </div>
-        </section>
-    </main>
-
-    <footer class="bg-dark text-white py-5 mt-8">
+<header>
+    <nav class="navbar navbar-expand-lg bg-light fixed-top">
         <div class="container">
-            <div class="row">
-                <div class="col-md-4 mb-4">
-                    <h5>Наши контакты:</h5>
-                    <ul class="list-unstyled">
-                        <li><a href="#" class="text-white-50 text-decoration-none">Gmail</a></li>
-                        <li><a href="#" class="text-white-50 text-decoration-none">Telegram</a></li>
-                        <li><a href="#" class="text-white-50 text-decoration-none">TikTok</a></li>
-                    </ul>
+            
+            <a class="navbar-brand" href="index.html">JS Курс</a>
+            
+            <button class="navbar-toggler" 
+            type="button" 
+            data-bs-toggle="collapse" 
+            data-bs-target="#navbarNav" 
+            aria-controls="navbarNav" 
+            aria-expanded="false" 
+            aria-label="Переключить навигацию">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            
+            <div class="navbar-collapse" id="navbarNav">
+                
+                <ul class="navbar-nav ms-auto p-3 gap-4 mx-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="#where">Где применяется?</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#prog">Общие сведения</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#nachni">Начать обучение</a>
+                    </li>
+                </ul>
+                <div class="d-none d-lg-block" style="width: 150px;"></div>
+            </div>
+        </div>
+    </nav>
+</header>
+
+<main>
+    <div class="container text-center" style="margin-top: 15%; margin-bottom: 10%; max-width: 1000px;">
+        <div class="row">
+            <div class="col-12 mb-4 reveal">
+                <img src="assets/kurs.png" alt="курс" class="imgKurs">
+            </div>
+            
+            <div class="col-12 reveal">
+                <img src="assets/JavaScript.png" alt="JavaScript" class="imgJS">
+            </div>
+            
+            <div class="col-12 row reveal">
+                <div class="col-6">
+                    <a href="#start-kurs-btn2">
+                        <img src="assets/стрелкиЛево.png" alt="стрелки" class="arrowsL">
+                    </a>
                 </div>
-                <div class="col-md-4 mb-4">
-                    <h5>О нас</h5>
-                    <p class="text-white-50">© 2026 JS Курс. Бесплатное обучение программированию.</p>
-                </div>
-                <div class="col-md-4 mb-4">
-                    <h5>Курсы</h5>
-                    <ul class="list-unstyled">
-                        <li><a href="kurs.html" class="text-white-50 text-decoration-none">JavaScript</a></li>
-                        <li><a class="text-white-50 text-decoration-line-through">PHP</a></li>
-                        <li><a class="text-white-50 text-decoration-line-through">Python</a></li>
-                        <li><a class="text-white-50 text-decoration-line-through">Java</a></li>
-                    </ul>
+                <div class="col-6">
+                    <a href="#start-kurs-btn2">
+                        <img src="assets/стрелкиПраво.png" alt="стрелки2" class="arrowsR">
+                    </a>
                 </div>
             </div>
         </div>
-    </footer>
+    </div>
+    
+    <div class="container" 
+    style="max-width: 1000px;" 
+    id="where">
+        <div class="row">
+            
+            <div class="col-12 mb-5">
+                <h4 class="text-start text mb-4">Сферы применения JavaScript</h4>
+                <p class="text-start text">JavaScript – это универсальный и востребованный язык программирования, который работает во всех браузерах и на сервере. С его помощью ты освоишь веб-разработку, научишься создавать интерактивные сайты, мобильные приложения и серверные сервисы. JavaScript легко изучать, он популярен в IT, а большое сообщество и множество вакансий помогут тебе быстро построить карьеру</p>
+            </div>
+            
+            <div class="col-12 mb-3 reveal">
+                <div class="d-flex align-items-center mb-5 gap-4">
+
+                    <div class="image-content col-4">
+                        <img 
+                        src="assets/chemu.jpg" 
+                        alt="фото кода" 
+                        class="img-fluid roundImg">
+                    </div>
+
+                    <div class="text-content">
+                        <h4 class="text-start text mb-4">
+                            Чему вы научитесь на курсе JavaScript
+                        </h4>
+                        <p class="text-stat text">
+                            Разберётесь в базовом синтаксисе JavaScript — это фундаментальный навык, который позволит понимать чужой код и писать собственные программы. После курса сможете создавать простые скрипты, например, калькулятор
+                        </p>
+                    </div>
+
+                </div>
+            </div>
+            
+            <div class="col-12 reveal"
+            style="margin-bottom: 10%;">
+                <div class="d-flex align-items-center mb-5 gap-4">
+
+                    <div class="text-content">
+                        <h4 class="text-start mb-4 text">Игровая форма обучения</h4>
+                        <p class="text-start text">
+                            Курс разработан в игровой методике по мотивам RPG-игр для максимального участия пользователя в процессе и интереса обучения.
+                        </p>
+                    </div>
+                    
+                    <div class="image-content col-4">
+                        <img src="assets/342f38dc0c3591fc1ef8b4fdbac070d8.jpg" 
+                        alt="фото кода" 
+                        class="img-fluid roundImg">
+                    </div>
+                    
+                </div>
+            </div>
+            
+            <div class="custom-card"
+            id="start-kurs-btn">
+                <div class="card-text">
+                    <h4>Присоединяйся к бесплатному курсу Java Script.</h4>
+                </div>
+                <a href="prologue.html" class="text-decoration-none"><button class="text-decoration-none custom-btn">Начать обучение</button></a>
+            </div>
+            
+            <div class="container" style="max-width: 1000px; margin-bottom: 10%;" id="prog">
+                <div class="row">
+                    <div class="col-12 mb-4">
+                        <h3>Общие сведения о JavaScript:</h3>
+                    </div>
+                    <div class="col-12 reveal">
+                        <div class="accordion" id="accordionExample">
+                            <div class="accordion-item">
+                                <h2 class="accordion-header">
+                                    <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                                        <h6>Основы Java Script</h6>
+                                    </button>
+                                </h2>
+                                <div id="collapseOne" class="accordion-collapse collapse show" data-bs-parent="#accordionExample">
+                                    <div class="accordion-body">
+                                        <p><strong>JavaScript – один из самых популярных языков программирования в мире.</strong> Он используется для создания интерактивных веб-страниц, мобильных приложений, в серверной разработке. Изучать JS мы будем с нуля, с самых азов. Первый модуль – плацдарм  для написания осмысленных программ. В нем мы разберем, как написать свой первый код на JS. Расскажем, что такое комментарии и зачем они нужны. На примере проверки ваших решений рассмотрим, что такое тестирование и как читать вывод тестов.</p>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="accordion-item">
+                                <h2 class="accordion-header">
+                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                                        <h6>Переменные в Java Script</h6>
+                                    </button>
+                                </h2>
+                                <div id="collapseTwo" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+                                    <div class="accordion-body">
+                                        <p><strong>Переменные — это основа любого языка программирования.</strong> В этом модуле вы узнаете, как хранить данные и работать с ними: числа, строки, логические значения. Разберёте разницу между <code>let</code>, <code>const</code> и <code>var</code>, научитесь правильно именовать переменные и писать первый осмысленный код с их использованием.</p>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="accordion-item">
+                                <h2 class="accordion-header">
+                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                                        <h6>Синтаксис Java Script</h6>
+                                    </button>
+                                </h2>
+                                <div id="collapseThree" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+                                    <div class="accordion-body">
+                                        <p><strong>Здесь вы детально изучите правила написания кода на JS</strong>: операторы, выражения, условные конструкции <code>if</code>/<code>else</code> и циклы <code>for</code>, <code>while</code>. Поймёте, как управлять ходом программы и создавать простые алгоритмы. Этот модуль заложит фундамент для решения более сложных задач.</p>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="accordion-item">
+                                <h2 class="accordion-header">
+                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
+                                        <h6>Вызов функций Java Script</h6>
+                                    </button>
+                                </h2>
+                                <div id="collapseFour" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+                                    <div class="accordion-body">
+                                        <p><strong>Функции — это кирпичики любой программы.</strong> Вы научитесь объявлять собственные функции, передавать им аргументы и возвращать результаты. Узнаете, как встроенные функции JS упрощают разработку, и сможете структурировать код, делая его переиспользуемым и понятным.</p>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="accordion-item">
+                                <h2 class="accordion-header">
+                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFive" aria-expanded="false" aria-controls="collapseFive">
+                                        <h6>Ваш первый проект на Java Script</h6>
+                                    </button>
+                                </h2>
+                                <div id="collapseFive" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+                                    <div class="accordion-body">
+                                        <p><strong>Пора применить все знания на практике!</strong> Под руководством наставника вы создадите свой мини-проект: интерактивный элемент страницы, игру или полезный скрипт. Вы пройдёте полный цикл — от идеи до работающего кода, закрепите навыки и получите результат, который можно добавить в <strong>портфолио.</strong></p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="container" style="max-width: 1000px; margin-bottom: 10%;" id="nachni">
+                <h3 class="mb-4">Ответы на вопросы:</h3>
+                <div class="row">
+                    <div class="row">
+                        <div class="col-12">
+                            <h5 class="mb-3">Как быстро можно освоить JavaScript с нуля?</h5>
+                            <p>Скорость освоения зависит от вашего опыта и времени, которое вы готовы уделять обучению. Основы синтаксиса, переменные, функции и условия можно понять пройдя наш первый курс "Основы JavaScript".</p>
+                        </div>
+                        <div class="col-12">
+                            <h5 class="mb-3">Как правильно произносится название языка?</h5>
+                            <p>Обычно говорят джаваскрипт (иногда пишут джава скрипт), но встречается так же жс (js, сокращение от javascript). А кто-то говорит жаваскрипт. Помимо этого, JavaScript очень часто путают с языком Java (джава) из-за похожего названия</p>
+                        </div>
+                    </div>
+                    <div class="col-12">
+                        <h5 class="mb-3">Кому подойдет этот курс?</h5>
+                        <p>Он создавался как javascript для "чайников". Курс подходит для детей и взрослых без опыта программирования. Его даже можно использовать как JavaScript учебник</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="container" style="margin-bottom: 10%;" id="start-kurs-btn2">
+                <div class="card ">
+                    <img src="assets/nachni.png" class="card-img" alt="...">
+                    <div class="card-img-overlay">
+                        <a href="prologue.html">
+                            <img src="assets/btnNachi.png" alt="" class="mt-4 float-md-end img-btn">
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+    
+<footer class="bg-dark text-white py-5 text-center mt-auto">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-4 mb-4">
+                <h5 class="fw-bold">Наши контакты:</h5>
+                <ul class="list-unstyled">
+                    <li><a href="#" class="text-white-50 text-decoration-none">Почта - 1paladinsgg1@gmail.com</a></li>
+                </ul>
+            </div>
+            <div class="col-md-4 mb-4">
+                <h5 class="fw-bold">О нас</h5>
+                <p class="text-white-50">© 2026 JS Курс. Бесплатное обучение программированию.</p>
+            </div>
+            <div class="col-md-4 mb-4">
+                <h5 class="fw-bold">Навигация</h5>
+                <ul class="list-unstyled">
+                    <li><a href="index.html" class="text-white-50 text-decoration-none">В начало страницы</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</footer>
+
 </body>
 </html>

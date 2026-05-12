@@ -14,13 +14,13 @@
     <link rel="stylesheet" href="css/header-footer.css">
 
     <script src="js/grimuar.js" defer></script>
+    <script src="/js/observer.js" defer></script>
 </head>
 <body>
 
-<header class="p-1">
+<header class="p-1 sticky-top">
     <div class="container text-center">
-        <a class="text-decoration-none text-light m-0" href="prologue.html" style="font-size: xx-large;">↩︎</a>
-        <h1 class="mb-4" style="font-size: large;">Знакомство с Java Script</h1>
+        <a class="text-decoration-none text-light mb-2 arrowNav" href="prologue.html" style="font-size: xx-large;">↩︎</a>
         <div class="progress mx-auto" style="max-width: 400px; height: 12px;">
             <div class="progress-bar bg-warning" role="progressbar" style="width: 40%;" aria-valuenow="40" aria-valuemin="0" aria-valuemax="100"></div>
         </div>
@@ -60,7 +60,7 @@
             </div>
         </div>
 
-        <div class="my-5 p-3 rounded-4" style="background: #29322f;">
+        <div class="my-5 p-3 rounded-4" style="box-shadow: 0 10px 0 #fdd870; opacity: 50%;">
             <h4 class="mb-3">📜 Название сосудов важно писать по определенным правилам:</h4>
             <ul class="list-unstyled" style="font-family: 'Source Code Pro', monospace;">
                 <li>✓ Только <strong>Англ. Буквы и цифры</strong> (и символы $ _ )</li>
@@ -71,7 +71,7 @@
         </div>
 
         <!-- 1 ТЕСТ -->
-        <div class="test-card">
+        <div class="test-card reveal">
             <h4 class="fw-bold mb-2">Выберите ТОЛЬКО ВЕРНЫЕ названия сосудов</h4>
             <div class="divider"></div>
             <div class="row align-items-start">
@@ -90,7 +90,7 @@
                 <div class="col-md-5">
                     <label class="form-label fw-semibold">Введите ответ</label>
                     <input type="text" id="variableTestInput" class="form-control answer-input text-light" placeholder="">
-                    <div class="small-note mt-2">ответ запишите числами в порядке увеличения (пример: 3 5 6 8)</div>
+                    <div class="small-note mt-2">ответ запишите числами в порядке увеличения (пример: 1234)</div>
                     <button class="btn btn-outline-warning mt-3 w-100" id="firstTestBtn">Проверить</button>
                     <div id="variableResult" class="mt-2 small fst-italic"></div>
                 </div>
@@ -98,7 +98,7 @@
         </div>
 
         <!-- const теория -->
-        <div class="my-5 pt-3">
+        <div class="my-5 pt-3 reveal">
             <h2 class="fw-bold">Руна <span class="highlight-gold">const</span> — Сосуд вечной магии</h2>
             <p class="fs-5">const создаёт сосуд, привязанный к одному значению навсегда. Как твоё истинное имя или магическая печать.</p>
         </div>
@@ -122,13 +122,13 @@
                 </div>
             </div>
         </div>
-        <div class="alert alert-dark border-warning bg-black-50 mb-150">
-            ‼️ <strong>Важно:</strong> Попытка изменить const вызовет магический сбой (ошибку)! Вид синтаксиса менять нельзя!
+        <div class="mb-150 mt-150">
+            <p class="fs-4" style="opacity: 50%;"><strong>Важно:</strong> Попытка изменить const вызовет магический сбой (<span class="text-danger">ОШИБКУ</span>)!</p>
         </div>
 
         <!-- Комментарии в коде теория -->
-        <div class="my-5">
-            <h2 class="fw-bold">📖 Комментарии в коде</h2>
+        <div class="my-5 reveal">
+            <h2 class="fw-bold">Комментарии в коде</h2>
             <p class="fs-5">Кроме кода, в файлах с исходным кодом могут находиться комментарии. Это текст, который не является частью программы и нужен программистам для пометок. С их помощью добавляют пояснения, как работает код, какие здесь ошибки нужно поправить или не забыть что-то добавить позже.</p>
         </div>
 
@@ -152,12 +152,9 @@
                 </div>
             </div>
         </div>
-        <div class="alert alert-dark border-warning bg-black-50 mb-150">
-            ‼️ <strong>Важно:</strong> Попытка изменить const вызовет магический сбой (ошибку)! Вид синтаксиса менять нельзя!
-        </div>
 
         <!-- Комментарии теория расширенная -->
-        <div class="my-5">
+        <div class="my-5 reveal">
             <h2 class="fw-bold">Java Script | Комментарии в коде (расширенный гримуар)</h2>
             <p class="fs-5">Комментарии помогают понять магические формулы и предостерегают от неверных действий. Они бывают однострочные и многострочные.</p>
         </div>
@@ -182,9 +179,9 @@
         </div>
 
         <!-- консоль теория -->
-        <div class="my-5">
+        <div class="my-5 reveal">
             <h2 class="fw-bold">🪞 Магическое зеркало (консоль)</h2>
-            <p class="fs-5">Консоль помогает увидеть результат действия в Java Script и вывести его в консоль вашего сайта, можно использовать как проверку работоспособности функции(познакомимся позже) или выводить значения ваших сосудов на ваш сайт. Например, у вас есть сосуд PoisonBottle со значением 3, написал console.log(PoisonBottle) вы увидите в консоли цифру 3.</p>
+            <p class="fs-5">Консоль помогает увидеть результат действия в Java Script и вывести его в консоль вашего сайта, можно использовать как проверку работоспособности функции(познакомимся позже) или выводить значения ваших сосудов на ваш сайт. Например, у вас есть сосуд PoisonBottle со значением 3, написал console.log(PoisonBottle) вы увидите в консоли цифру 3. Открыть консоль -> F12 -> Консоль</p>
         </div>
         <div class="row g-4">
             <div class="col-md-6">
@@ -208,8 +205,8 @@
         </div>
 
         <!-- 2 тест -->
-        <div class="test-card mt-5">
-            <h5 class="fw-bold">🔍 Что выведется в консоль?</h5>
+        <div class="test-card mt-5 mb-5 reveal">
+            <h5 class="fw-bold">Что выведется в консоль?</h5>
             <span class="function">console.log</span>(<span class="string">`Привет, Мир!`</span>); <span class="comment">// пример вывода текста, обратите внимание на синтаксис</span>
             <div class="divider"></div>
             <div class="mb-3">
@@ -230,13 +227,19 @@
             <div id="consoleResult" class="mt-3 small fw-bold"></div>
         </div>
 
-        <!-- кнопка перехода дальше -->
-        <div class="text-center my-5">
-            <a href="test.html" class="text-decoration-none"> <button class="scroll-btn" id="readyBtn">✨ Я готов к испытанию! ✨</button> </a>
+        <!-- кнопка перехода дальше + счетчик -->
+        <div class="text-center">
+            <div class="mb-3" style="color: #fdd870;">
+                <p class="fs-4 questCounter" id="questCounter">0 из 2</p>
+            </div>
+            
+            <a href="test.html" class="text-decoration-none"> 
+                <button class="scroll-btn reveal p-4" id="readyBtn" disabled>Вы еще не закончили тесты!</button> 
+            </a>
         </div>
 
         <!-- список изученного -->
-        <div class="my-5 p-4 rounded-4" style="background: #29322f; border-left: 6px solid #B2C773;">
+        <div class="my-5 p-4 rounded-4" style="background: #00000094; box-shadow: 0 10px 0 #fdd870; opacity: 50%;">
             <h3 class="fw-bold">📜 Рунический Свод Правил:</h3>
             <ul class="mt-3" style="font-family: 'Source Code Pro', monospace;">
                 <li>Имя сосуда (идентификатор) может содержать буквы, цифры, символы $ и _.</li>
@@ -255,9 +258,7 @@
             <div class="col-md-4 mb-4">
                 <h5 class="fw-bold">Наши контакты:</h5>
                 <ul class="list-unstyled">
-                    <li><a href="#" class="text-white-50 text-decoration-none">Gmail</a></li>
-                    <li><a href="#" class="text-white-50 text-decoration-none">Telegram</a></li>
-                    <li><a href="#" class="text-white-50 text-decoration-none">TikTok</a></li>
+                    <li><a href="#" class="text-white-50 text-decoration-none">Почта - 1paladinsgg1@gmail.com</a></li>
                 </ul>
             </div>
             <div class="col-md-4 mb-4">
@@ -265,12 +266,10 @@
                 <p class="text-white-50">© 2026 JS Курс. Бесплатное обучение программированию.</p>
             </div>
             <div class="col-md-4 mb-4">
-                <h5 class="fw-bold">Курсы</h5>
+                <h5 class="fw-bold">Навигация</h5>
                 <ul class="list-unstyled">
-                    <li><a href="kurs.html" class="text-white-50 text-decoration-none">JavaScript</a></li>
-                    <li><a class="text-white-50 text-decoration-line-through">PHP</a></li>
-                    <li><a class="text-white-50 text-decoration-line-through">Python</a></li>
-                    <li><a class="text-white-50 text-decoration-line-through">Java</a></li>
+                    <li><a href="index.html" class="text-white-50 text-decoration-none">На главную</a></li>
+                    <li><a href="map.html" class="text-white-50 text-decoration-none">Карта заданий</a></li>
                 </ul>
             </div>
         </div>

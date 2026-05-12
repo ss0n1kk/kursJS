@@ -18,7 +18,7 @@
 
             document.querySelector('#finishQuestBtn').classList.remove('d-none');
         } else {
-            feedbackText.innerText = `🫪 Ошибка в заклинании! Важно соблюдать ВСЕ условия. Попробуй еще раз!`;
+            feedbackText.innerText = `Ошибка в заклинании! Важно соблюдать ВСЕ условия. Попробуй еще раз!`;
             feedbackText.style.color = `#FF4848`;
         }
         

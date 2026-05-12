@@ -10,7 +10,7 @@ document.addEventListener('DOMContentLoaded', function() {
     let consoleOptions = document.querySelectorAll('input[name="consoleTest"]');
 
     let readyBtn = document.querySelector('#readyBtn');
-    readyBtn.style.display = 'none';
+    let questCounter = document.querySelector('#questCounter');
     
     // булевое состояние тестов
     let isVarTestDone = false;
@@ -18,11 +18,20 @@ document.addEventListener('DOMContentLoaded', function() {
 
     // проверка (функция)
     function checkAllQuests() {
-        if (isVarTestDone == true && isConsoleTestDone == true) {
-            readyBtn.style.display = 'inline-block';
-            console.log("Все тесты пройдены");
+        let completedCount = 0
+        if (isVarTestDone) {completedCount++}
+        if (isConsoleTestDone) {completedCount++}
+
+        questCounter.innerHTML = `${completedCount} / 2`;
+
+        if (completedCount === 2) {
+            readyBtn.disabled = false;
+            questCounter.style.color = "#74ff72ae";
+            readyBtn.classList.add(`btnDone`)
+            readyBtn.innerHTML = `Я готов к испытанию!`
         } else {
-            readyBtn.style.display = 'none';
+            readyBtn.disabled = true;
+            readyBtn.innerHTML = `Вы еще не закончили тесты!`
         }
     }
 
@@ -31,12 +40,12 @@ document.addEventListener('DOMContentLoaded', function() {
         let answer = variableInput.value.trim();
         
         if (answer == "3 5 6 8" || answer == "3568") {
-            variableResult.innerHTML = "🫪 Верно! Иди дальше!";
-            variableResult.style.color = "#75FF72";
+            variableResult.innerHTML = "Верно! Иди дальше!";
+            variableResult.style.color = "#74ff72ae";
             isVarTestDone = true;
             variableInput.value = ``
         } else {
-            variableResult.innerHTML = "❌ Ошибка";
+            variableResult.innerHTML = "Ошибка";
             variableResult.style.color = "#ED484B";
             isVarTestDone = false;
         }
@@ -55,12 +64,12 @@ document.addEventListener('DOMContentLoaded', function() {
         }
 
         if (selectedValue == "2") {
-            consoleResult.innerHTML = "🫪 Задание пройдено!";
-            consoleResult.style.color = "#75FF72";
+            consoleResult.innerHTML = "Задание пройдено!";
+            consoleResult.style.color = "#74ff72ae";
             isConsoleTestDone = true;
         } else {
-            consoleResult.innerHTML = "❌ Попробуйте другой вариант.";
-            consoleResult.style.color = "#ED484B";
+            consoleResult.innerHTML = "Попробуйте другой вариант.";
+            consoleResult.style.color = "#ed484bb7";
             isConsoleTestDone = false;
         }
 
