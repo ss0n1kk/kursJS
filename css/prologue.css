@@ -1,0 +1,83 @@
+* {
+  margin: 0;
+}
+
+/*observer(анимации)*/
+.reveal {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: all 2s ease-out;
+}.reveal.active {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+body {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)),  url('/assets/prologue1background.png');
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  margin: 0;
+  position: relative;
+}
+
+.container {
+  position: relative;
+  z-index: 2;
+}
+
+h1 {
+  font-family: 'Press Start 2P', cursive;
+}
+
+p, .lead, .fs-5 {
+  font-family: 'Montserrat Alternates', sans-serif;
+}
+
+.gold-text{
+    color: #fdd870;
+}
+
+.btn-custom {
+  font-family: 'Press Start 2P';
+  font-size: 0.9rem;
+  position: relative;
+  padding: 18px 30px;
+  border: 4px solid #fdd870;
+  color: white;
+  text-shadow: 2px 2px 0 #000;
+  border-radius: 0;
+  letter-spacing: 1px;
+  transition: 0.3s;
+  word-wrap: break-word;
+  z-index: 2;
+  border-radius: 15px;
+}
+
+.btn-custom:hover {
+  transform: scale(1.02);
+  box-shadow: 0 0 25px #fdd870;
+  border-color: #fdd870;
+  background-color: #fdd870;
+}
+
+.shaky-text {
+    animation: shake 0.8s infinite alternate;
+}
+
+@keyframes shake {
+    0% { transform: translate(0.3px, 0.3px); }
+    33% { transform: translate(-0.3px, 0px); }
+    66% { transform: translate(0.3px, -0.3px); }
+    100% { transform: translate(-0.3px, 0.3px); }
+}
+
+@media (max-width: 576px) {
+  .master-phrase {
+    font-size: 1.5rem;
+  }
+  .btn-custom {
+    font-size: 0.7rem;
+    padding: 15px 20px;
+  }
+}

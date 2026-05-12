@@ -1,0 +1,35 @@
+.square-img {
+    object-fit: cover;
+    width: 100%;
+    height: 200px;
+}
+
+.card, .bg-light.rounded-4 {
+    transition: box-shadow 0.2s ease;
+}
+
+.card:hover, .bg-light.rounded-4:hover {
+    box-shadow: 0 8px 16px rgba(0,0,0,0.1);
+}
+
+body{
+    text-align: center;
+
+}
+
+.mt-8{
+    margin-top: 8%;
+}
+
+.containerMax{
+    max-width: 1000px;
+}
+
+p{
+    font-size: 1.1rem;
+}
+
+h6{
+    font-weight: 600;
+    font-size: 1.4rem;
+}
