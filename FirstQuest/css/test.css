@@ -181,7 +181,7 @@ main {
 /* адаптивность */
 @media (max-width: 768px) {
     body {
-        background-image: url(/assets/firstQuest/test/mobile_background.png);
+        background-image: url('../../assets/firstQuest/test/mobile_background.png');
     }
     .greeting-card {
         margin-left: 0 !important;
