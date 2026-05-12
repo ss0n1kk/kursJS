@@ -18,7 +18,7 @@
 
 body {
     font-family: 'Anonymous Pro', monospace;
-    background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url('/assets/firstQuest/test/background.jpeg');
+    background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url('../../assets/firstQuest/test/background.jpeg');
     background-repeat: repeat;
     background-size: 100% 130%;
     background-attachment: fixed;
@@ -181,7 +181,7 @@ main {
 /* адаптивность */
 @media (max-width: 768px) {
     body {
-        background-image: url(/assets/firstQuest/test/mobile_background.png);
+        background-image: url('../../assets/firstQuest/test/mobile_background.png');
     }
     .greeting-card {
         margin-left: 0 !important;

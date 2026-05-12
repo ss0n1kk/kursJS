@@ -19,7 +19,7 @@
 body{
     font-family: 'Montserrat Alternates', monospace;
     background-color: #0a0c0f;
-    background-image: linear-gradient(rgba(0, 0, 0, 0.65), rgba(0, 0, 0, 0.65)), url('/assets/firstQuest/grimuar/background.jpg');
+    background-image: linear-gradient(rgba(0, 0, 0, 0.65), rgba(0, 0, 0, 0.65)), url('../../assets/firstQuest/grimuar/background.jpg');
     background-repeat: repeat;
     background-attachment: fixed;
     color: #ffffff;
