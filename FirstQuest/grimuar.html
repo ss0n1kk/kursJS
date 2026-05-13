@@ -1,0 +1,347 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+    <title>Dark Fantasy JS | Гримуар</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Anonymous+Pro:ital,wght@0,400;0,700;1,400;1,700&family=Montserrat+Alternates:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Press+Start+2P&family=Source+Code+Pro:ital,wght@0,200..900;1,200..900&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <link rel="stylesheet" href="css/grimuar.css">
+    <link rel="stylesheet" href="css/header-footer.css">
+
+    <script src="js/grimuar.js" defer></script>
+    <script src="../js/observer.js" defer></script>
+
+        <link rel="shortcut icon" href="../assets/javascript icon.webp" type="image/x-icon">
+</head>
+<body>
+
+<header class="p-1 sticky-top">
+    <div class="container text-center">
+        <a class="text-decoration-none text-light mb-2 arrowNav" href="prologue.html" style="font-size: xx-large;">↩︎</a>
+        <div class="progress mx-auto" style="max-width: 400px; height: 12px;">
+            <div class="progress-bar bg-warning" role="progressbar" style="width: 40%;" aria-valuenow="40" aria-valuemin="0" aria-valuemax="100"></div>
+        </div>
+        <p class="mt-2 small text-white-50">Прогресс: 40% — шаг 2 из 5</p>
+        <h2 class="mb-4 text-white-50" style="font-size: 1rem;">Руины Цитадели | Старый гримуар</h2>
+    </div>
+</header>
+
+<main class="flex-shrink-0">
+    <div class="container custom-container py-3">
+
+        <!-- let теория -->
+        <div class="my-5">
+            <h2 class="fw-bold">Руна <span class="highlight-gold">let</span> — Сосуд изменчивой магии</h2>
+            <p class="fs-5">let создаёт сосуд, <span class="highlight-moss">который можно наполнить и потом изменить</span>. Это как мешок, в который ты кладёшь зелья, золото или очки жизни.</p>
+        </div>
+
+        <div class="row g-4 mb-5">
+            <div class="col-md-6">
+                <div class="code-widget">
+                    <div class="code-header">Java Script</div>
+                    <div class="code-content">
+                        <span class="keyword">let</span> <span class="variable">имяСосуда</span> = <span class="value">значение</span>;
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="code-widget">
+                    <div class="code-header">Java Script</div>
+                    <div class="code-content">
+                        <span class="keyword">let</span> <span class="variable">health</span> = <span class="value">100</span>; <span class="comment">// Твои текущие очки жизни</span><br>
+                        <span class="keyword">let</span> <span class="variable">gold</span> = <span class="value">50</span>; <span class="comment">// Количество золота в кошельке</span><br><br>
+                        <span class="variable">health</span> = <span class="value">75</span>; <span class="comment">// После схватки с гоблином жизнь уменьшилась</span><br>
+                        <span class="variable">gold</span> = <span class="value">80</span>; <span class="comment">// Нашел клад — золота стало больше!</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="my-5 p-3 rounded-4" style="box-shadow: 0 10px 0 #fdd870; opacity: 75%;">
+            <h4 class="mb-3">📜 Название сосудов важно писать по определенным правилам:</h4>
+            <ul class="list-unstyled" style="font-family: 'Source Code Pro', monospace;">
+                <li>✓ Только <strong>Англ. Буквы и цифры</strong> (и символы $ _ )</li>
+                <li>✗ Начинать название с цифры нельзя! Это вызовет <span class="text-danger">ОШИБКУ</span></li>
+                <li>✗ Пробелы запрещены, но можно использовать разный регистр букв</li>
+                <li>⚠️ Регистр ОЧЕНЬ важен, сосуды “gold” и “Gold” - это два разных сосуда для системы</li>
+                <li>💡 Лучше использовать <strong>camelCase</strong>(Название способа написания), например magicCrystal или healthPoints</li>
+            </ul>
+        </div>
+
+        <!-- 1 ТЕСТ -->
+        <div class="test-card reveal">
+            <h4 class="fw-bold mb-2">Выберите ТОЛЬКО ВЕРНЫЕ названия сосудов</h4>
+            <div class="divider"></div>
+            <div class="row align-items-start">
+                <div class="col-md-7">
+                    <ul class="variant-list">
+                        <li>1. Золото</li>
+                        <li>2. 1золото</li>
+                        <li>3. gold</li>
+                        <li>4. 1gold</li>
+                        <li>5. Poison1</li>
+                        <li>6. HealPoison</li>
+                        <li>7. Heal Poison</li>
+                        <li>8. HOUSEcarpet</li>
+                    </ul>
+                </div>
+                <div class="col-md-5">
+                    <label class="form-label fw-semibold">Введите ответ</label>
+                    <input type="text" id="variableTestInput" class="form-control answer-input text-light" placeholder="">
+                    <div class="small-note mt-2">ответ запишите числами в порядке увеличения (пример: 1234)</div>
+                    <button class="btn btn-outline-warning mt-3 w-100" id="firstTestBtn">Проверить</button>
+                    <div id="variableResult" class="mt-2 small fw-bold"></div>
+                </div>
+            </div>
+        </div>
+
+        <!-- const теория -->
+        <div class="my-5 pt-3 reveal">
+            <h2 class="fw-bold">Руна&nbsp;<span class="highlight-gold">const</span>&nbsp;— Сосуд вечной магии</h2>
+            <p class="fs-5">const&nbsp;создаёт сосуд, который не меняется после создания. Это как печать, имя героя или заклинание, которое остаётся верным навсегда.</p>
+        </div>
+        <div class="row g-4 mb-3">
+            <div class="col-md-6">
+                <div class="code-widget">
+                    <div class="code-header">Java Script</div>
+                    <div class="code-content">
+                        <span class="keyword">const</span> <span class="variable">имяСосуда</span> = <span class="value">значение</span>;
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="code-widget">
+                    <div class="code-header">Java Script</div>
+                    <div class="code-content">
+                        <span class="keyword">const</span> <span class="variable">myTrueName</span> = <span class="string">"Артас"</span>; <span class="comment">// Истинное имя изменить нельзя</span><br>
+                        <span class="keyword">const</span> <span class="variable">birthYear</span> = <span class="value">1223</span>; <span class="comment">// Год рождения — константа</span><br>
+                        <span class="keyword">const</span> <span class="variable">isMagician</span> = <span class="value">true</span>; <span class="comment">// Ты маг, и это факт</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="mb-150 mt-150">
+            <p class="fs-4" style="opacity: 75%; word-break: break-all;"><strong>Важно:</strong> Попытка изменить const вызовет магический сбой (<span class="text-danger">ОШИБКУ</span>)!</p>
+        </div>
+
+        <!-- Комментарии в коде теория -->
+        <div class="my-5 reveal">
+            <h2 class="fw-bold">Комментарии в коде</h2>
+            <p class="fs-5">Комментарии — это тайные пометки, которые не выполняются. Они помогают себе и другим понять, зачем написан код, или где искать ошибку.</p>
+        </div>
+
+        <div class="row g-4 mb-4">
+            <div class="col-md-6">
+                <div class="code-widget">
+                    <div class="code-header">Java Script | Однострочный комментарий</div>
+                    <div class="code-content">
+                        <span class="keyword">//</span> <span class="comment">Этот текст игнорируется и не выполняется</span>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="code-widget">
+                    <div class="code-header">Java Script | Многострочный комментарий</div>
+                    <div class="code-content">
+                        <span class="keyword">/*</span><br>
+                        <span class="comment">Здесь можно писать длинную подсказку</span><br>
+                        <span class="comment">или описывать ход мысли</span><br>
+                        <span class="keyword">*/</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Сложение переменных -->
+        <div class="my-5 reveal">
+            <h2 class="fw-bold">Сложение сосудов — как объединять магию</h2>
+            <p class="fs-5">В JavaScript можно складывать значения из разных сосудов и сохранять результат в новом. Это поможет тебе собрать все добытые предметы в одно число.<br>Важно: если ты объявишь сосуд через <code>const</code>, то сам сосуд потом нельзя будет переписать. Но результат сложения можно сохранить в новом сосуде.</p>
+        </div>
+        <div class="row g-4 mb-5">
+            <div class="col-md-6">
+                <div class="code-widget">
+                    <div class="code-header">Java Script</div>
+                    <div class="code-content">
+                        <span class="keyword">let</span> <span class="variable">aleBarrels</span> = <span class="value">12</span>;<br>
+                        <span class="keyword">let</span> <span class="variable">honeyJugs</span> = <span class="value">5</span>;<br>
+                        <span class="keyword">let</span> <span class="variable">potionBottles</span> = <span class="value">8</span>;
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="code-widget">
+                    <div class="code-header">Java Script</div>
+                    <div class="code-content">
+                        <span class="keyword">let</span> <span class="variable">totalGoods</span> = <span class="variable">aleBarrels</span> + <span class="variable">honeyJugs</span> + <span class="variable">potionBottles</span>;<br>
+                        <span class="function">console.log</span>(<span class="variable">totalGoods</span>); <span class="comment">// покажет 25</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="test-card mt-5 mb-5 reveal">
+            <h5 class="fw-bold">Что покажет магическое зеркало?</h5>
+            <span class="keyword">let</span> <span class="variable">a</span> = <span class="value">2</span>;<br>
+            <span class="keyword">let</span> <span class="variable">b</span> = <span class="value">3</span>;<br>
+            <span class="keyword">let</span> <span class="variable">sum</span> = <span class="variable">a</span> + <span class="variable">b</span>;<br>
+            <span class="function">console.log</span>(<span class="variable">sum</span>);<br>
+            <div class="divider"></div>
+            <div class="mb-3">
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="sumTest" id="sumOpt1" value="1">
+                    <label class="form-check-label" for="sumOpt1">23</label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="sumTest" id="sumOpt2" value="2">
+                    <label class="form-check-label" for="sumOpt2">5</label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="sumTest" id="sumOpt3" value="3">
+                    <label class="form-check-label" for="sumOpt3">a + b</label>
+                </div>
+            </div>
+            <button class="btn btn-outline-warning mt-3" id="sumTestBtn">Проверить ответ</button>
+            <div id="sumResult" class="mt-3 small fw-bold"></div>
+        </div>
+
+        <!-- консоль теория -->
+        <div class="my-5 reveal">
+            <h2 class="fw-bold">🪞 Магическое зеркало (консоль)</h2>
+            <p class="fs-5">Консоль показывает результат ваших заклинаний. Если вы хотите увидеть, что хранится в сосуде, отправьте его в зеркало с помощью <code>console.log</code>.</p>
+        </div>
+        <div class="row g-4">
+            <div class="col-md-6">
+                <div class="code-widget">
+                    <div class="code-header">Java Script | Синтаксис призыва зеркала:</div>
+                    <div class="code-content">
+                        <span class="function">console.log</span>(<span class="variable">значение</span>); <span class="comment">// зеркало покажет это на экране</span>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="code-widget">
+                    <div class="code-header">Java Script | Пример вызова зеркала:</div>
+                    <div class="code-content">
+                        <span class="keyword">let</span> <span class="variable">PoisonBottle</span> = <span class="value">3</span>;<br>
+                        <span class="function">console.log</span>(<span class="variable">PoisonBottle</span>); <span class="comment">// покажет число 3</span><br><br>
+                        <span class="function">console.log</span>(<span class="string">`Привет, Мир!`</span>); <span class="comment">// покажет текст в зеркале</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- 2 тест -->
+        <div class="test-card mt-5 mb-5 reveal">
+            <h5 class="fw-bold">Что выведется в консоль?</h5>
+            <span class="function">console.log</span>(<span class="string">`Привет, Мир!`</span>); <span class="comment">// пример вывода текста, обратите внимание на синтаксис</span>
+            <div class="divider"></div>
+            <div class="mb-3">
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="consoleTest" id="opt1" value="1">
+                    <label class="form-check-label" for="opt1">3</label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="consoleTest" id="opt2" value="2">
+                    <label class="form-check-label" for="opt2">Привет, мир!</label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="consoleTest" id="opt3" value="3">
+                    <label class="form-check-label" for="opt3">3`Привет, мир!`</label>
+                </div>
+            </div>
+            <button class="btn btn-outline-warning mt-3" id="checkConsoleBtn">Проверить ответ</button>
+            <div id="consoleResult" class="mt-3 small fw-bold"></div>
+        </div>
+
+        <!-- кнопка перехода дальше + счетчик -->
+        <div class="text-center">
+            <div class="mb-3" style="color: #fdd870;">
+                <p class="fs-4 questCounter" id="questCounter">0 из 3</p>
+            </div>
+            
+            <a href="test.html" class="text-decoration-none"> 
+                <button class="scroll-btn reveal p-4" id="readyBtn" disabled>Вы еще не закончили тесты!</button> 
+            </a>
+        </div>
+
+        <!-- список изученного -->
+        <div class="my-5 p-4 rounded-4" style="background: #00000094; box-shadow: 0 10px 0 #fdd870; opacity: 75%; word-break: break-all;">
+            <h3 class="fw-bold">📜 Рунический Свод Правил:</h3>
+            <ul class="mt-3" style="font-family: 'Source Code Pro', monospace;">
+                <li>Имя сосуда (идентификатор) может содержать буквы, цифры, символы $ и _.</li>
+                <li>Первый символ не может быть цифрой.</li>
+                <li>Регистр букв важен: Gold и gold — два разных сосуда.</li>
+                <li>Используй разницу регистра вместо пробелов для имён из нескольких слов, например: magicCrystalCount.</li>
+                <li>Теперь ты знаешь: можно сложить значения из нескольких сосудов и хранить сумму в новом.</li>
+            </ul>
+        </div>
+
+    </div>
+</main>
+
+<footer class="bg-dark text-white py-5 text-center mt-auto">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-4 mb-4 text-center">
+                <h5 class="fw-bold">Почта для связи:</h5>
+                <ul class="list-unstyled">
+                    <li><p href="#" class="text-white-50 text-decoration-none">kursjsfeedback@icloud.com </p></li>
+                    <li><button class="btn btn-outline-secondary mt-3" id="feedbackBtn">Обратная связь</button></li>
+                </ul>
+            </div>
+            <div class="col-md-4 mb-4 text-center">
+                <h5 class="fw-bold">О нас</h5>
+                <p class="text-white-50">© 2026 JS Курс. Бесплатное обучение программированию.</p>
+            </div>
+            <div class="col-md-4 mb-4 text-center">
+                <h5 class="fw-bold">Навигация</h5>
+                <ul class="list-unstyled">
+                    <li><a href="../index.html" class="text-white-50 text-decoration-none">На главную</a></li>
+                    <li><a href="../map.html" class="text-white-50 text-decoration-none">Карта заданий</a></li>
+                    <li><a href="prologue.html" class="text-white-50 text-decoration-none">Пролог</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</footer>
+
+<div class="modal fade" id="feedbackModal" tabindex="-1" aria-labelledby="feedbackLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content bg-dark text-light">
+            <div class="modal-header border-warning">
+                <h5 class="modal-title" id="feedbackLabel">Ваш отзыв о курсе</h5>
+                <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <form id="feedbackForm">
+                    <div class="mb-3">
+                        <label for="userName" class="form-label">Как вас зовут?</label>
+                        <input type="text" class="form-control" id="userName" placeholder="Имя" required>
+                    </div>
+                    <div class="mb-3">
+                        <label for="userFeedback" class="form-label">Ваш отзыв / предложения</label>
+                        <textarea class="form-control" id="userFeedback" rows="4" placeholder="Напишите ваш отзыв или опишите ситуацию с которой вы столкнулись..." required></textarea>
+                    </div>
+                    <div class="mb-3">
+                        <label for="userEmail" class="form-label">Ваша почта (По желанию)</label>
+                        <input type="email" class="form-control" id="userEmail" placeholder="email@example.com">
+                    </div>
+                </form>
+            </div>
+            <div class="modal-footer border-warning">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Отмена</button>
+                <button type="button" class="btn btn-warning" id="sendFeedbackBtn">Отправить отзыв</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script src="../js/feedback.js" defer></script>
+
+</body>
+</html>

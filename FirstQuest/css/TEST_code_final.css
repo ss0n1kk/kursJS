@@ -1,0 +1,136 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/*observer(анимации)*/
+.reveal {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: all 1s ease-out;
+}.reveal.active {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+body {
+    background-image: url('../../assets/firstQuest/tavern_quest/background.webp');
+    background-size: 100% 130%;
+    background-attachment: fixed;
+    background-color: #2c1a0e;
+    font-family: 'Montserrat Alternates', sans-serif;
+    color: #ffffff;
+}
+
+.gold-text {
+    font-family: 'Press Start 2P', cursive;
+    color: #fdd870;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.8);
+    font-size: 1.2rem;
+}
+
+/* Карточка квеста */
+.quest-card {
+    background: rgba(0, 0, 0, 0.7);
+    border: 1px solid rgba(255, 215, 150, 0.3);
+    border-radius: 20px;
+    backdrop-filter: blur(8px);
+}
+
+.quest-title {
+    font-family: 'Press Start 2P', cursive;
+    font-size: 0.9rem;
+    color: #fdd870;
+}
+
+/* Редактор кода */
+.editor-container {
+    background: rgba(20, 20, 25, 0.95);
+    border: 2px solid #4a2a12;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 0 20px rgba(0,0,0,0.5);
+}
+
+.editor-top {
+    background: #343a40;
+    font-family: 'Press Start 2P', cursive;
+    font-size: 0.7rem;
+    color: #fff8e4;
+}
+
+.line-numbers {
+    background: #1a1a1a;
+    border-right: 1px solid #333;
+    font-family: 'Courier New', monospace;
+    min-width: 40px;
+}
+
+.code-area {
+    background: transparent;
+    border: none;
+    color: #dcdcdc;
+    font-family: 'Courier New', monospace;
+    resize: none;
+    outline: none;
+    line-height: 1.5;
+}
+
+.wood-btn {
+    background-image: url('https://www.transparenttextures.com/patterns/wood-pattern.png');
+    background-blend-mode: overlay;
+    border: none;
+    border-radius: 8px;
+    padding: 12px 24px;
+    font-family: 'Press Start 2P', cursive;
+    font-size: 0.9rem;
+    transition: all 0.2s ease;
+    box-shadow: 0 5px 0 #4a2a12;
+    width: 100%;
+}
+
+.wood-btn:active {
+    transform: translateY(3px);
+    box-shadow: 0 2px 0 #4a2a12;
+}
+
+.btn-accept { color: #BDFFAF; background-color: #2c5e1a; }
+.btn-decline { color: #E45151; background-color: #5e2a2a; }
+
+.textGreen { color: #5EB462; font-weight: bold; }
+.textRed { color: #FF4848; font-weight: bold; }
+
+.feedback-area {
+    background: rgba(0, 0, 0, 0.5);
+    border-left: 4px solid #fdd870;
+    padding: 10px;
+}
+
+.lore-container {
+    backdrop-filter: blur(5px);
+    border: 2px solid rgba(253, 216, 112, 0.3);
+    border-radius: 1.5rem;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+}
+
+.lore-text {
+    font-family: 'Montserrat Alternates', sans-serif;
+    font-size: 1.3rem;
+    line-height: 1.6;
+    color: #f8f9fa;
+    text-align: center;
+}
+
+.lore-instruction {
+    font-family: 'Montserrat Alternates', sans-serif;
+    font-size: 1rem;
+    color: #e9ecef;
+    border-top: 1px solid rgba(253, 216, 112, 0.2);
+    padding-top: 1rem;
+    text-align: center;
+}
+
+.lore-container .gold-text{
+    font-family: 'Montserrat Alternates', sans-serif;
+}
