@@ -12,9 +12,25 @@ document.addEventListener('DOMContentLoaded', function() {
     let readyBtn = document.querySelector('#readyBtn');
     let questCounter = document.querySelector('#questCounter');
     
-    // булевое состояние тестов
-    let isVarTestDone = false;
-    let isConsoleTestDone = false;
+    // восстановление прогресса из localStorage
+    let isVarTestDone = localStorage.getItem('isVarTestDone') === 'true';
+    let isConsoleTestDone = localStorage.getItem('isConsoleTestDone') === 'true';
+
+    if (isVarTestDone) {
+        variableResult.innerHTML = "Верно! Иди дальше!";
+        variableResult.style.color = "#74ff72ae";
+        variableBtn.disabled = true;
+    }
+
+    if (isConsoleTestDone) {
+        consoleResult.innerHTML = "Верно! Иди дальше!";
+        consoleResult.style.color = "#74ff72ae";
+        consoleBtn.disabled = true;
+        document.querySelector('#opt2').checked = true;
+    }
+    
+    checkAllQuests();
+
 
     // проверка (функция)
     function checkAllQuests() {
@@ -43,6 +59,8 @@ document.addEventListener('DOMContentLoaded', function() {
             variableResult.innerHTML = "Верно! Иди дальше!";
             variableResult.style.color = "#74ff72ae";
             isVarTestDone = true;
+            localStorage.setItem('isVarTestDone', 'true');
+
             variableInput.value = ``
         } else {
             variableResult.innerHTML = "Ошибка";
@@ -67,6 +85,8 @@ document.addEventListener('DOMContentLoaded', function() {
             consoleResult.innerHTML = "Задание пройдено!";
             consoleResult.style.color = "#74ff72ae";
             isConsoleTestDone = true;
+
+            localStorage.setItem('isConsoleTestDone', 'true');
         } else {
             consoleResult.innerHTML = "Попробуйте другой вариант.";
             consoleResult.style.color = "#ed484bb7";

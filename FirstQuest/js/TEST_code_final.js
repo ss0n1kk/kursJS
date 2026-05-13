@@ -3,6 +3,17 @@
     const feedbackText = document.querySelector('#feedbackText');
     const feedbackBlock = document.querySelector('#feedbackBlock');
     
+    // Загрузка сохранённого кода при загрузке страницы
+    const savedCode = localStorage.getItem('testCodeInput');
+    if (savedCode) {
+        codeInput.value = savedCode;
+    }
+    
+    // Сохранение кода в реальном времени
+    codeInput.addEventListener('input', () => {
+        localStorage.setItem('testCodeInput', codeInput.value);
+    });
+    
     checkBtn.addEventListener('click', () => {
         let userCode = codeInput.value.toLowerCase();
         

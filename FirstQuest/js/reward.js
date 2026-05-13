@@ -2,7 +2,7 @@ const messages = [
     `— Вижу-вижу! Все цифры на твоей табличке сошлись. Ну и задал ты жару этим переменным!`,
     `Как и обещала — вот твой трофей. <br>Вижу, это твой первый кусок! Без него ты бы застрял в этих руинах навечно. Делай с ним что хочешь.`,
     `<span class="goldText">*Вы получили: [Осколок: Руины Цитадели]*</span>`,
-    `Ты выглядишь уставшим, малец. Поднимайся на второй этаж, комната готова. Завтра путь будет неблизким...`
+    `Ты выглядишь уставшим. Поднимайся на второй этаж, комната готова. Завтра путь будет неблизким...`
 ];
 
 const buttons = [
@@ -30,7 +30,7 @@ function nextStep() {
 
     chatBox.innerHTML += `
         <div class="d-flex align-items-start mb-4 animate-fade-in">
-            <img src="../../assets/friren.jpg" class="message-avatar me-3">
+            <img src="../assets/friren.jpg" class="message-avatar me-3">
             <div class="message p-3">
                 <div class="message-name mb-1">Трактирщик Фрирен</div>
                 <div class="message-text">${messages[step]}</div>
