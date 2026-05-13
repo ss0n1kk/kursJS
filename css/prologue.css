@@ -2,6 +2,11 @@
   margin: 0;
 }
 
+html, body {
+  overflow-x: hidden;
+  width: 100%;
+}
+
 /*observer(анимации)*/
 .reveal {
     opacity: 0;
@@ -13,12 +18,13 @@
 }
 
 body {
-  background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)),  url('../assets/prologue1background.png');
+  background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)),  url('../assets/prologue1background.webp');
   background-size: cover;
   background-position: center;
   background-attachment: fixed;
   margin: 0;
   position: relative;
+  overflow-x: hidden;
 }
 
 .container {
@@ -28,6 +34,16 @@ body {
 
 h1 {
   font-family: 'Press Start 2P', cursive;
+  margin-top: 50px;
+  word-break: break-word;
+  padding: auto;
+  padding-left: 10px;
+  padding-right: 10px;
+}
+
+backText {
+  word-wrap: break-word;
+  overflow-wrap: break-word;
 }
 
 p, .lead, .fs-5 {
@@ -36,6 +52,7 @@ p, .lead, .fs-5 {
 
 .gold-text{
     color: #fdd870;
+    text-shadow: 0 0 15px #fdd77077;
 }
 
 .btn-custom {
@@ -52,6 +69,7 @@ p, .lead, .fs-5 {
   word-wrap: break-word;
   z-index: 2;
   border-radius: 15px;
+  margin-bottom: 50px;
 }
 
 .btn-custom:hover {
@@ -72,12 +90,9 @@ p, .lead, .fs-5 {
     100% { transform: translate(-0.3px, 0.3px); }
 }
 
-@media (max-width: 576px) {
-  .master-phrase {
-    font-size: 1.5rem;
-  }
+@media (max-width: 768px) {
   .btn-custom {
-    font-size: 0.7rem;
+    font-size: 0.9rem;
     padding: 15px 20px;
   }
 }

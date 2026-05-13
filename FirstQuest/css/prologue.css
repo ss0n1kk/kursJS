@@ -32,7 +32,7 @@ footer{
 }
 
 body {
-    background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url('../../assets/mobback.png');    
+    background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url('../../assets/mobback.webp');    
     background-attachment: fixed;
     background-size: 100% 100%;
     background-repeat: no-repeat;

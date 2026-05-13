@@ -18,7 +18,7 @@
 
 body {
     font-family: 'Anonymous Pro', monospace;
-    background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url('../../assets/firstQuest/test/background.jpeg');
+    background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url('../../assets/firstQuest/test/background.webp');
     background-repeat: repeat;
     background-size: 100% 130%;
     background-attachment: fixed;
@@ -144,11 +144,27 @@ main {
     border: 1px solid #B2C773;
 }
 
+.portal-container{
+    margin-bottom: 150px;
+    overflow: hidden;
+    height: 1000px;
+}
+
+.portal-appearance{
+    max-width: 500px;
+    filter: drop-shadow(0 0 50px rgba(29, 155, 193, 0.651));
+    transition: 0.8s;
+}
+
 .portal {
     animation: 
         portalOpen 3.5s cubic-bezier(0.34, 1.56, 0.64, 1) forwards, 
         float 6s infinite ease-in-out 3.5s;
     transform-origin: center;
+}
+
+.portal-appearance:hover{
+    filter: drop-shadow(0 0 70px rgb(29, 155, 193));
 }
 
 @keyframes portalOpen {
@@ -169,19 +185,19 @@ main {
 
 .shaky-text {
     animation: shake 0.8s infinite alternate;
+    filter: drop-shadow(0 0 5px white);
 }
 
 @keyframes shake {
-    0% { transform: translate(0.5px, 0.5px); }
-    33% { transform: translate(-0.5px, 0px); }
-    66% { transform: translate(0.5px, -0.5px); }
-    100% { transform: translate(-0.5px, 0.5px); }
+    0% { transform: translate(2px, 2px); }
+    33% { transform: translate(-2px, 0px); }
+    66% { transform: translate(2px, -2px); }
+    100% { transform: translate(-2px, 2px); }
 }
 
-/* адаптивность */
 @media (max-width: 768px) {
     body {
-        background-image: url('../../assets/firstQuest/test/mobile_background.png');
+        background-image: url('../../assets/firstQuest/test/mobile_background.webp');
     }
     .greeting-card {
         margin-left: 0 !important;
@@ -195,5 +211,11 @@ main {
     }
     header h1 {
         font-size: 0.9rem;
+    }
+    .portal-appearance {
+        max-width: 300px;
+    }
+    .portal-container {
+        max-height: fit-content;
     }
 }

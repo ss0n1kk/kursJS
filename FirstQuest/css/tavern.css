@@ -21,8 +21,15 @@ body {
     min-height: 100vh;
 }
 
+header{
+    background-image: url('../../assets/firstQuest/tavern_quest/background.webp');
+    background-size: 100% 130%;
+    background-attachment: fixed;
+
+}
+
 main{
-    background-image: url('../../assets/firstQuest/tavern_quest/background.png');
+    background-image: url('../../assets/firstQuest/tavern_quest/background.webp');
     background-size: 100% 130%;
     background-attachment: fixed;
 }
@@ -91,4 +98,11 @@ main{
 @keyframes fadeIn {
     from { opacity: 0; transform: translateY(15px); }
     to { opacity: 1; transform: translateY(0); }
+}
+
+@media (max-width: 768px) {
+    #answerBtn, .acceptBtnPfys {
+        font-size: 0.8rem;
+        padding: 7px 14px !important;
+    }
 }

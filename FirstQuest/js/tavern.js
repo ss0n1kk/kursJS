@@ -29,7 +29,7 @@ function nextStep() {
     if (step < messages.length) {
         chatBox.innerHTML += `
             <div class="d-flex align-items-start mb-4 animate-fade-in">
-                <img src="../assets/friren.jpg" class="message-avatar me-3">
+                <img src="../assets/friren.webp" class="message-avatar me-3">
                 <div class="message p-3">
                     <div class="message-name mb-1">Трактирщик Фрирен</div>
                     <div class="message-text">${messages[step]}</div>

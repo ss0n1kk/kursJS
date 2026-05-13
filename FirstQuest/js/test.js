@@ -3,7 +3,7 @@ let answers = {
     q2: '30',
     q3: '150',
     q4: 'const myBirthYear = 1995;',
-    q5: 'Привет, Алекс!',
+    q5: '25',
     q6: '/* текст */'
 };
 
@@ -32,18 +32,22 @@ if (currentStep >= cards.length) {
 function showPortal() {
     let portal = document.getElementById('portal-container');
     let greetingMessage = document.querySelector(`.greeting-card`);
+    let header = document.querySelector(`header`)
     if (greetingMessage) greetingMessage.classList.add(`d-none`);
     cards.forEach(card => card.classList.add('d-none'));
     portal.classList.remove('d-none');
+    header.classList.add(`d-none`);
 }
 
 // Отправить уведомление о сложности теста
 function sendDifficultyAlert(questionId) {
+    const totalErrorCount = Object.values(errorLog).reduce((sum, count) => sum + count, 0);
     const templateParams = {
         question_id: questionId,
-        message_type: 'Пользователь не может пройти тесты - требуется упрощение',
+        message_type: 'Пользователь плачет',
         error_count: questionsWithErrors.size,
-        questions_with_errors: Array.from(questionsWithErrors).join(', ')
+        questions_with_errors: Array.from(questionsWithErrors).join(', '),
+        total_error_count: totalErrorCount
     };
 
     if (typeof emailjs === 'undefined' || typeof emailjs.send !== 'function') {
@@ -104,13 +108,15 @@ for (let i = 0; i < cards.length; i++) {
                 showPortal();
             }
         } else {
-            // Отслеживание ошибок
+            // Отслеживание количества ошибок
+            errorLog[questionId] = (errorLog[questionId] || 0) + 1;
+            localStorage.setItem('testErrorLog', JSON.stringify(errorLog));
+
             if (!questionsWithErrors.has(questionId)) {
                 questionsWithErrors.add(questionId);
                 localStorage.setItem('questionsWithErrors', JSON.stringify(Array.from(questionsWithErrors)));
                 
-                // Если 6 ошибок в разных заданиях - отправить уведомление
-                if (questionsWithErrors.size === 6) {
+                if (questionsWithErrors.size === 5) {
                     sendDifficultyAlert(questionId);
                 }
             }

@@ -12,9 +12,9 @@
 
   <link rel="stylesheet" href="css/prologue.css">
   <script src="js/observer.js" defer></script>
-    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js" defer></script>
     <script src="js/feedback.js" defer></script>
-      <link rel="shortcut icon" href="assets/javascript icon.png" type="image/x-icon">
+      <link rel="shortcut icon" href="assets/javascript icon.webp" type="image/x-icon">
 </head>
 
 <body class="text-white">
@@ -25,24 +25,24 @@
         <div class="row">
         <div class="col-12 col-lg-10 col-xl-8 mx-auto">
 
-            <h1 class="display-4 fw-bold mb-4 animate-title reveal shaky-text">
+            <h1 class="display-4 fw-bold mb-4 shaky-text">
                 <span class="gold-text">ВЕБ-ЛЕНД:</span> ИНИЦИАЛИЗАЦИЯ
             </h1>
 
-            <p class="lead mb-4 fs-4 backText p-3 reveal shaky-text">
+            <p class="lead mb-4 fs-4 backText reveal shaky-text">
                 Ты открываешь глаза. Тишина. Ты в огромном пустом зале, где нет ни стен, ни пола — только бесконечный цифровой туман. 
                 Вдруг перед тобой вспыхивает гигантская неоновая фигура. 
                 <span class="gold-text">Система приветствует нового Игрока.</span>
             </p>
 
-            <p class="fs-5 mb-5 backText p-2 reveal shaky-text">
+            <p class="fs-5 mb-5 backText reveal shaky-text">
                 «Слушай внимательно, Странник», — раздается голос. 
                 «Столица этого мира — <span class="gold-text">Веб Ленд</span>. Она умирает, потому что Король Демонов исказил переменные судьбы. 
                 Тебе нужно собрать Осколки Ключа, пойти по руинам городов и дойти до столицы Веб Ленд. <br>Лишь овладев мощью Java Script ты сможешь переписать финал этой истории, Только защитив столицу ты вернешься домой.
             </p>
 
             <div class="button-wrapper position-relative d-inline-block">
-                <a href="map.html"><button class="btn btn-custom z-2"> РИСКНУТЬ </button></a>
+                <a href="map.html"><button class="btn btn-custom z-2 text-decoration-none"> РИСКНУТЬ </button></a>
             </div>
 
         </div>
@@ -53,18 +53,18 @@
 <footer class="bg-dark text-white py-5 text-center mt-auto">
     <div class="container">
         <div class="row">
-            <div class="col-md-4 mb-4">
+            <div class="col-md-4 mb-4 text-center">
                 <h5 class="fw-bold">Почта для связи:</h5>
                 <ul class="list-unstyled">
                     <li><p href="#" class="text-white-50 text-decoration-none">kursjsfeedback@icloud.com </p></li>
                     <li><button class="btn btn-outline-secondary mt-3" id="feedbackBtn">Обратная связь</button></li>
                 </ul>
             </div>
-            <div class="col-md-4 mb-4">
+            <div class="col-md-4 mb-4 text-center">
                 <h5 class="fw-bold">О нас</h5>
                 <p class="text-white-50">© 2026 JS Курс. Бесплатное обучение программированию.</p>
             </div>
-            <div class="col-md-4 mb-4">
+            <div class="col-md-4 mb-4 text-center">
                 <h5 class="fw-bold">Навигация</h5>
                 <ul class="list-unstyled">
                     <li><a href="index.html" class="text-white-50 text-decoration-none">На главную</a></li>
@@ -89,7 +89,7 @@
                     </div>
                     <div class="mb-3">
                         <label for="userFeedback" class="form-label">Ваш отзыв / предложения</label>
-                        <textarea class="form-control" id="userFeedback" rows="4" placeholder="Напишите ваш отзыв..." required></textarea>
+                        <textarea class="form-control" id="userFeedback" rows="4" placeholder="Напишите ваш отзыв или опишите ситуацию с которой вы столкнулись..." required></textarea>
                     </div>
                     <div class="mb-3">
                         <label for="userEmail" class="form-label">Ваша почта (По желанию)</label>

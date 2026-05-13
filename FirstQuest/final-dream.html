@@ -8,11 +8,13 @@
     <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&family=Montserrat+Alternates:wght@400;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/final-dream.css">
     
-    <link rel="shortcut icon" href="../assets/javascript icon.png" type="image/x-icon">
+    <link rel="shortcut icon" href="../assets/javascript icon.webp" type="image/x-icon">
 </head>
 <body>
-    <div class="dream-container">
-        <img src="../assets/prologue1background.png" class="lady-image" alt="Дух Кода">
+
+<main>
+    <div class="dream-container mt-5">
+        <img src="../assets/prologue1background.webp" class="lady-image" alt="Дух Кода">
         
         <h1>Ты славно потрудился, юный маг...</h1>
         
@@ -28,9 +30,10 @@
         <a href="../map.html" class="btn-wakeup">ПРОСНУТЬСЯ (НА КАРТУ)</a>
 
         <div style="margin: 20px 0;">
-            <button class="btn text-light me-2" id="feedbackBtn">Оставить отзыв</button>
+            <button class="btn text-light me-2" id="feedbackBtn">Оставить оценку</button>
         </div>
     </div>
+</main>
 
     <!-- Модальное окно обратной связи -->
     <div class="modal fade" id="feedbackModal" tabindex="-1" aria-labelledby="feedbackLabel" aria-hidden="true">
@@ -59,7 +62,7 @@
                         </div>
                         <div class="mb-3">
                             <label for="userFeedback" class="form-label">Ваш отзыв / предложения</label>
-                            <textarea class="form-control" id="userFeedback" rows="4" placeholder="Напишите ваш отзыв..." required></textarea>
+                        <textarea class="form-control" id="userFeedback" rows="4" placeholder="Напишите ваш отзыв или опишите ситуацию с которой вы столкнулись..." required></textarea>
                         </div>
                         <div class="mb-3">
                             <label for="userEmail" class="form-label">Ваша почта (По желанию)</label>

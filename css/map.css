@@ -13,7 +13,7 @@
 }
 
 body {
-    background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('../assets/фонкартынорм.jpg');
+    background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('../assets/фонкартынорм.webp');
     background-size: cover;
     background-position: center;
     background-attachment: fixed;
@@ -52,13 +52,14 @@ body {
     font-family: 'Press Start 2P', monospace;
     color: #fdd870;
     font-size: 0.9rem;
+    letter-spacing: 3px;
     text-shadow: 2px 2px 0 #00000050;
     word-break: break-word;
     min-height: 40px;
 }
 
 .quest-body {
-    background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('../assets/mobback.png');
+    background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('../assets/mobback.webp');
     border-radius: 2rem;
     border: 4px solid #fdd870;
     padding: 2rem 1rem;
@@ -82,12 +83,14 @@ body {
     border-radius: 50%;
     border: 3px solid #fdd870;
     box-shadow: 0 8px 20px rgba(0,0,0,0.5);
-    transition: 0.4s;
+    transition: 0.3s;
+    filter: drop-shadow(0 0 5px #fdd870);
 }
 
 .start-photo:hover {
     transform: scale(1.05);
-    border-color: #00ff9f;
+    border-color: #fcdd86;
+    filter: drop-shadow(0 0 10px #fcdd86);
 }
 
 .card-title {

@@ -9,12 +9,17 @@ document.addEventListener('DOMContentLoaded', function() {
     let consoleResult = document.querySelector('#consoleResult');
     let consoleOptions = document.querySelectorAll('input[name="consoleTest"]');
 
+    let sumBtn = document.querySelector('#sumTestBtn');
+    let sumResult = document.querySelector('#sumResult');
+    let sumOptions = document.querySelectorAll('input[name="sumTest"]');
+
     let readyBtn = document.querySelector('#readyBtn');
     let questCounter = document.querySelector('#questCounter');
     
     // восстановление прогресса из localStorage
     let isVarTestDone = localStorage.getItem('isVarTestDone') === 'true';
     let isConsoleTestDone = localStorage.getItem('isConsoleTestDone') === 'true';
+    let isSumTestDone = localStorage.getItem('isSumTestDone') === 'true';
 
     if (isVarTestDone) {
         variableResult.innerHTML = "Верно! Иди дальше!";
@@ -28,6 +33,13 @@ document.addEventListener('DOMContentLoaded', function() {
         consoleBtn.disabled = true;
         document.querySelector('#opt2').checked = true;
     }
+
+    if (isSumTestDone) {
+        sumResult.innerHTML = "Верно! Иди дальше!";
+        sumResult.style.color = "#74ff72ae";
+        sumBtn.disabled = true;
+        document.querySelector('#sumOpt2').checked = true;
+    }
     
     checkAllQuests();
 
@@ -37,10 +49,11 @@ document.addEventListener('DOMContentLoaded', function() {
         let completedCount = 0
         if (isVarTestDone) {completedCount++}
         if (isConsoleTestDone) {completedCount++}
+        if (isSumTestDone) {completedCount++}
 
-        questCounter.innerHTML = `${completedCount} / 2`;
+        questCounter.innerHTML = `${completedCount} / 3`;
 
-        if (completedCount === 2) {
+        if (completedCount === 3) {
             readyBtn.disabled = false;
             questCounter.style.color = "#74ff72ae";
             readyBtn.classList.add(`btnDone`)
@@ -91,6 +104,29 @@ document.addEventListener('DOMContentLoaded', function() {
             consoleResult.innerHTML = "Попробуйте другой вариант.";
             consoleResult.style.color = "#ed484bb7";
             isConsoleTestDone = false;
+        }
+
+        checkAllQuests();
+    });
+
+    // третий тест
+    sumBtn.addEventListener('click', function() {
+        let selectedValue = "";
+        for (let i = 0; i < sumOptions.length; i++) {
+            if (sumOptions[i].checked) {
+                selectedValue = sumOptions[i].value;
+            }
+        }
+
+        if (selectedValue == "2") {
+            sumResult.innerHTML = "Задание пройдено!";
+            sumResult.style.color = "#74ff72ae";
+            isSumTestDone = true;
+            localStorage.setItem('isSumTestDone', 'true');
+        } else {
+            sumResult.innerHTML = "Попробуйте другой вариант.";
+            sumResult.style.color = "#ed484bb7";
+            isSumTestDone = false;
         }
 
         checkAllQuests();
